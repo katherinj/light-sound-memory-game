@@ -48,14 +48,27 @@ video {
 #button1 {
   background: lightgreen;
 }
-
+#button1:active {
+  background: green;
+}
 #button2 {
-  background: lightgreen;
+  background: lightblue;
 }
 
+#button2:active {
+  background: blue;
+}
 #button3 {
-  background: lightpink;
+  background: pink;
+}
+
+#button3:active {
+  background: red;
 }
 #button4 {
   background: lightyellow;
+}
+
+#button4:active {
+  background: yellow;
 }
