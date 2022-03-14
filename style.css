@@ -40,3 +40,22 @@ video {
   height: auto;
   max-width: 100%;
 }
+
+.hidden{
+  display: none;
+}
+
+#button1 {
+  background: lightgreen;
+}
+
+#button2 {
+  background: lightgreen;
+}
+
+#button3 {
+  background: lightpink;
+}
+#button4 {
+  background: lightyellow;
+}
