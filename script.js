@@ -11,7 +11,6 @@ var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0 
-var delay = 0; 
 var guessCounter = 0; 
 
 function startGame(){
@@ -109,4 +108,32 @@ function loseGame(){
 function winGame(){
   stopGame();
   alert("Game Over. You won!");
+}
+
+function guess(btn){
+  console.log("user guessed: " + btn);
+  if(!gamePlaying){
+    return;
+  }
+  
+  //game logic 
+  //guess correct
+  if(guess = pattern[progress]){
+     //turn over?
+    if(guess = 1){
+      //last turn?
+      if(guess = 1){
+        winGame();
+      }else{
+        progress++;
+        playClueSequence();
+      }
+    }else {
+      
+    }
+    
+  }else{
+    loseGame();
+  }
+      
 }
