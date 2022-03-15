@@ -90,6 +90,7 @@ function playSingleClue(btn){
 }
 
 function playClueSequence(){
+  context.resume()
   guessCounter = 0;
   let delay = nextClueWaitTime;
   for(let i=0;i<=progress;i++){
@@ -118,20 +119,19 @@ function guess(btn){
   
   //game logic 
   //guess correct
-  if(guess = pattern[progress]){
+  if(btn == pattern[guessCounter]){
      //turn over?
-    if(guess = 1){
+    if(guessCounter == progress){
       //last turn?
-      if(guess = 1){
+      if(progress == pattern.length-1){
         winGame();
       }else{
         progress++;
         playClueSequence();
       }
     }else {
-      
+      guessCounter++;
     }
-    
   }else{
     loseGame();
   }
