@@ -53,7 +53,6 @@ video {
 }
 #button1:active, #button1.lit {
   background: green;
-  console.log(lol)
 }
 #button2 {
   background: lightblue;

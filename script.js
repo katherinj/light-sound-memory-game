@@ -12,6 +12,7 @@ var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0 
 var delay = 0; 
+var guessCounter = 0; 
 
 function startGame(){
   //initialize game variables
@@ -19,10 +20,9 @@ function startGame(){
   gamePlaying = true;
  
   //swap the Start and Stop buttons
-  document.getElementByID('startBtn').classList.add("hidden");
-  document.getElementByID('stopBtn').classList.remove("hidden");
+  document.getElementById('startBtn').classList.add("hidden");
+  document.getElementById('stopBtn').classList.remove("hidden");
   playClueSequence();
-  console.log("start");
 }
 
 function stopGame(){
@@ -30,8 +30,8 @@ function stopGame(){
   gamePlaying = false;
  
   //swap the Start and Stop buttons
-  document.getElementByID("startBtn").classList.remove("hidden");
-  document.getElementByID("stopBtn").classList.add("hidden");
+  document.getElementById("startBtn").classList.remove("hidden");
+  document.getElementById("stopBtn").classList.add("hidden");
 }
 
 
@@ -91,12 +91,22 @@ function playSingleClue(btn){
 }
 
 function playClueSequence(){
-  context.resume()
-  let dela = nextClueWaitTime;
+  guessCounter = 0;
+  let delay = nextClueWaitTime;
   for(let i=0;i<=progress;i++){
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
     setTimeout(playSingleClue,delay,pattern[i])
     delay += clueHoldTime
     delay += cluePauseTime;
   }
+}
+
+function loseGame(){
+  stopGame();
+  alert("Game Over. You lost.");
+}
+
+function winGame(){
+  stopGame();
+  alert("Game Over. You won!");
 }
