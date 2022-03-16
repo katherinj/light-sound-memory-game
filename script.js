@@ -11,22 +11,49 @@ var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
 var clueHoldTime = 1000;
+var lives = 3; 
 
 //set difficulty level 
 function selectDifficulty(btn){
   difficulty = btn
 }
-function startGame(mode) {
-  //initialize game variables
+function setUpGame(mode) {
+  difficulty = mode;
+
+  switch(mode){
+    case "easy":
+      break;
+    case "med":
+      clueHoldTime = 700;
+      document.getElementById("button5").classList.remove("hidden");
+      break;
+    case "hard":
+      clueHoldTime = 500;
+      document.getElementById("button5").classList.remove("hidden");
+      document.getElementById("button6").classList.remove("hidden");
+      break;
+    case "imp":
+      clueHoldTime = 300;
+      lives = 0; 
+      document.getElementById("button5").classList.remove("hidden");
+      document.getElementById("button6").classList.remove("hidden");
+      break;
+  }
+  console.log("start game");
+  
+  document.getElementById("welcomeScreen").classList.add("hidden");
+  document.getElementById("gameScreen").classList.remove("hidden");
+
+}
+function startGame(){
+    //initialize game variables
   progress = 0;
   gamePlaying = true;
-  difficulty = mode;
-  console.log("start game");
+    playClueSequence();
   
   //swap the Start and Stop buttons
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
-  playClueSequence();
 }
 
 function stopGame() {
