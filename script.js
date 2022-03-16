@@ -1,5 +1,5 @@
 //Gloabl constants
-const cluePauseTime = 333;
+const cluePauseTime = 300;
 const nextClueWaitTime = 1000;
 
 //Gloabal variables
@@ -37,7 +37,7 @@ function setUpGame(mode) {
       setPattern(6);
       break;
     case "imp":
-      clueHoldTime = 300;
+      clueHoldTime = 100;
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
       setPattern(6);
@@ -81,6 +81,8 @@ function stopGame() {
   document.getElementById("gameScreen").classList.add("hidden");
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
+  document.getElementById("button5").classList.add("hidden");
+  document.getElementById("button6").classList.add("hidden");
 }
 
 // Sound Synthesis Functions
