@@ -131,3 +131,10 @@ video {
   height: auto;
   max-width: 100%;
 }
+
+#lifeCircle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%
+}
