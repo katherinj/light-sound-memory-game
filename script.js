@@ -38,7 +38,6 @@ function setUpGame(mode) {
       break;
     case "imp":
       clueHoldTime = 300;
-      lives = 0; 
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
       setPattern(6);
@@ -58,10 +57,14 @@ function setPattern(numBtns){
 }
 
 function startGame(){
+  if(difficulty == "imp"){
+    lives = 0; 
+  }else{
+    lives = 3;
+  }
     //initialize game variables
   progress = 0;
   gamePlaying = true;
-  
   
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
@@ -74,7 +77,8 @@ function stopGame() {
   //update game variable
   gamePlaying = false;
 
-  //swap the Start and Stop buttons
+  document.getElementById("welcomeScreen").classList.remove("hidden");
+  document.getElementById("gameScreen").classList.add("hidden");
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
 }
@@ -151,6 +155,7 @@ function playClueSequence() {
 function loseGame() {
   stopGame();
   alert("Game Over. You lost.");
+  
 }
 
 function winGame() {
@@ -165,7 +170,7 @@ function guess(btn) {
   }
 function wrongGuess(){
   alert("Wrong guess. You have " + lives + " lives left. Try again!");
-  play
+  playClueSequence();
 }
   //game logic
   //guess correct
@@ -183,8 +188,9 @@ function wrongGuess(){
       guessCounter++;
     }
   } else {
-    if(lives==0){
+    if(lives==1){
       loseGame();
+      return;
     }
     
     console.log(lives);
