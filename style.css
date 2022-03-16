@@ -16,14 +16,17 @@ html {
 body {
   margin: 2em;
   font-family: helvetica, arial, sans-serif;
+  font-weight: 200;
   line-height: 1.5;
-  background-color: #A294A2;
+  background-color: #FFF3F3;
   color: #403e40;
   text-align: center;
 }
 
 h1 {
   font-family: verdana, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
   text-align: center;
   color: #2e2d2e;
 }
@@ -43,41 +46,57 @@ button {
   margin: 2px;
 }
 
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
-  max-width: 100%;
-}
-
 #button1 {
-  background: lightgreen;
+  background: #FF9090;
 }
 #button1:active,
 #button1.lit {
   background: green;
 }
+
 #button2 {
   background: lightblue;
 }
-
 #button2:active,
 #button2.lit {
   background: blue;
 }
+
 #button3 {
   background: pink;
 }
-
 #button3:active,
 #button3.lit {
   background: red;
 }
+
 #button4 {
   background: lightyellow;
 }
-
 #button4:active,
 #button4.lit {
   background: yellow;
+}
+
+#button5 {
+  background: lightyellow;
+}
+#button5:active,
+#button5.lit {
+  background: yellow;
+}
+
+#button6 {
+  background: lightyellow;
+}
+#button6:active,
+#button6.lit {
+  background: yellow;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
 }
