@@ -61,52 +61,58 @@ button {
   margin: 2px;
 }
 
+/*red button*/
 #button1 {
   background: rgb(255, 176, 170);
 }
 #button1:active,
 #button1.lit {
-  background: rgb(253, 10, 170);
+  background: rgb(168, 50, 50);
 }
 
+/*orange button*/
 #button2 {
   background: rgb(255, 217, 170);
 }
 #button2:active,
 #button2.lit {
-  background: rgb(253, 10, 170);
+  background: rgb(168, 123, 50);
 }
 
+/*yellow button*/
 #button3 {
   background: rgb(253, 255, 170);
 }
 #button3:active,
 #button3.lit {
-  background: rgb(253, 10, 170);
+  background: rgb(168, 158, 50);
 }
 
+/*green button*/
 #button4 {
   background: rgb(170, 255, 188);
 }
 #button4:active,
 #button4.lit {
-  background: rgb(170, 10, 188);
+  background: rgb(95, 168, 50);
 }
 
+/*blue button*/
 #button5 {
   background: rgb(170, 204, 255);
 }
 #button5:active,
 #button5.lit {
-  background: rgb(170, 10, 255);
+  background: rgb(50, 111, 168);
 }
 
+/*purple button*/
 #button6 {
   background: rgb(251, 170, 255);
 }
 #button6:active,
 #button6.lit {
-  background: rgb(251, 10, 255);
+  background: rgb(139, 50, 168);
 }
 
 

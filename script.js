@@ -58,7 +58,7 @@ function setPattern(numBtns){
 
 function startGame(){
   if(difficulty == "imp"){
-    lives = 0; 
+    lives = 1; 
   }else{
     lives = 3;
   }
@@ -85,12 +85,12 @@ function stopGame() {
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 294.,
+  1: 293.7,
   2: 329.6,
-  3: 392,
-  4: 466.2,
-  5: 550,
-  6: 600,
+  3: 370.0,
+  4: 392.0,
+  5: 440.0,
+  6: 492.9,
 };
 function playTone(btn, len) {
   o.frequency.value = freqMap[btn];
