@@ -63,66 +63,83 @@ button {
 
 /*red button*/
 #button1 {
-  
-    background-image: "https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400";
-
+  /*background: rgb(255, 176, 170);*/
+    background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_egg.png?v=1647467999757);
+    background-size:cover;
 }
 #button1:active,
 #button1.lit {
  /* background: rgb(168, 50, 50);*/
-  background: url('https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400') no-repeat top left;
-
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
+  background-size:cover;
 }
 
 /*orange button*/
 #button2 {
-  background: rgb(255, 217, 170);
+  /*background: rgb(255, 217, 170);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_egg.png?v=1647468042521);
+  background-size:cover;
 }
 #button2:active,
 #button2.lit {
-  background: rgb(168, 123, 50);
+  /*background: rgb(168, 123, 50);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_open.png?v=1647468042853);
+  background-size:cover;
 }
 
 /*yellow button*/
 #button3 {
-  background: rgb(253, 255, 170);
+  /*background: rgb(253, 255, 170);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow_egg.png?v=1647468052543);
+  background-size:cover;
 }
 #button3:active,
 #button3.lit {
-  background: rgb(168, 158, 50);
+  /*background: rgb(168, 158, 50);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400);
+  background-size:cover;
 }
 
 /*green button*/
 #button4 {
-  background: rgb(170, 255, 188);
+  /*background: rgb(170, 255, 188);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_egg.png?v=1647468023365);
+  background-size:cover;
 }
 #button4:active,
 #button4.lit {
-  background: rgb(95, 168, 50);
+  /*background: rgb(95, 168, 50);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_open.png?v=1647468023300);
+  background-size:cover;
 }
 
 /*blue button*/
 #button5 {
-  background: rgb(170, 204, 255);
+  /*background: rgb(170, 204, 255);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_egg.png?v=1647468036576);
+  background-size:cover;
 }
 #button5:active,
 #button5.lit {
-  background: rgb(50, 111, 168);
+  /*background: rgb(50, 111, 168);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_open.png?v=1647467995617);
+  background-size:cover;
 }
 
 /*purple button*/
 #button6 {
-  background: rgb(251, 170, 255);
+  /*background: rgb(251, 170, 255);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_egg.png?v=1647468042816);
+  background-size:cover;
 }
 #button6:active,
 #button6.lit {
-  background: rgb(139, 50, 168);
+  /*background: rgb(139, 50, 168);*/
+background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_open.png?v=1647468042765);
+  background-size:cover;
 }
 
-#yellowOpen.active,
-{
-  
-}
+
 #difficultyBtnArea > button{
   width: 200px;
   height: 50px;
