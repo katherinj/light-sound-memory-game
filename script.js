@@ -151,7 +151,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
-  disableButtons(true);
+  //disableButtons(true);
   guessCounter = 0;
   let delay = nextClueWaitTime;
   for (let i = 0; i <= progress; i++) {
@@ -160,17 +160,14 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  disableButtons(false);
+  //disableButtons(false);
 }
 
 //disable/enable buttons
 function disableButtons(disableTheButtons){
+  console.log(disableTheButtons);
     for(let i=1; i<=6; i++){
-      if(disableTheButtons){
-            document.getElementById("button" + i).disabled=true;;
-      }else{
-            document.getElementById("button" + i).disabled=false;
-      }
+            document.getElementById("button" + i).disabled=disableTheButtons;
     }
 }
 
