@@ -37,7 +37,7 @@ function setUpGame(mode) {
       setPattern(6);
       break;
     case "imp":
-      clueHoldTime = 100;
+      clueHoldTime = 50;
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
       setPattern(6);
