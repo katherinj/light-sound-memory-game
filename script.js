@@ -23,6 +23,7 @@ function setUpGame(mode) {
   switch(mode){
     case "easy":
       setPattern(4);
+      console.log(lives);
       break;
     case "med":
       clueHoldTime = 700;
@@ -162,7 +163,10 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-
+function wrongGuess(){
+  alert("Wrong guess. You have " + lives + " lives left. Try again!");
+  play
+}
   //game logic
   //guess correct
   if (btn == pattern[guessCounter]) {
@@ -179,9 +183,13 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
-    if(lives=0){
+    if(lives==0){
       loseGame();
     }
+    
+    console.log(lives);
     lives--;
+    wrongGuess();
+    console.log(lives);
   }
 }
