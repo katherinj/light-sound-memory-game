@@ -13,11 +13,8 @@ var guessCounter = 0;
 var clueHoldTime = 1000;
 var lives = 3; 
 
-//set difficulty level 
-function selectDifficulty(btn){
-  difficulty = btn
-}
 function setUpGame(mode) {
+  //set difficulty level
   difficulty = mode;
 
   switch(mode){
@@ -65,6 +62,7 @@ function setPattern(numBtns){
 }
 
 function startGame(){
+  //initialize lives
   if(difficulty == "imp"){
     lives = 1; 
   }else{
@@ -84,7 +82,8 @@ function startGame(){
 function stopGame() {
   //update game variable
   gamePlaying = false;
-
+  
+  //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
   document.getElementById("gameScreen").classList.add("hidden");
   document.getElementById("startBtn").classList.remove("hidden");
@@ -163,29 +162,30 @@ function playClueSequence() {
   }
   disableButtons(false);
 }
+
+//disable/enable buttons
 function disableButtons(disableTheButtons){
     for(let i=1; i<=6; i++){
       if(disableTheButtons){
-            document.getElementById("button" + i).disable=true;;
-
+            document.getElementById("button" + i).disabled=true;;
+      }else{
+            document.getElementById("button" + i).disabled=false;
       }
-      else{
-            document.getElementById("button" + i).disable=false;
-
-      }
-      
     }
-
 }
+
 function loseGame() {
   stopGame();
-  alert("Game Over. You lost.");
-  
+  alert("Game Over. You lost.");  
 }
 
 function winGame() {
   stopGame();
-  alert("Game Over. You won!");
+  if(difficulty == "imp"){
+    alert("Congratulations! You beat the impossible!");
+  }else{
+    alert("Game Over. You won!");
+  }
 }
 
 function guess(btn) {
@@ -218,7 +218,6 @@ function wrongGuess(){
       return;
     }
     
-    console.log(lives);
     lives--;
     wrongGuess();
   }
