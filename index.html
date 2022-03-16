@@ -15,34 +15,17 @@
 
     <!-- welcome screen -->
     <div id="welcome screen">
-      
-      <p>Welcome to The Game!<br>Select your difficulty level</p>
-      
+      <p>Welcome to The Game!<br />Select your difficulty level</p>
+
       <div id="selectDifficultyBtnArea">
-        <button
-          
-                >
-          id="btnEasy"
-          onclick="guess(1)"
-          onmousedown="startTone(1)"
-          onmouseup="stopTone()"
-        ></button>
-        <button
-          id="btnIntermediate"
-          onclick="guess(2)"
-          onmousedown="startTone(2)"
-          onmouseup="stopTone()"
-        ></button>
-        <button
-          id="btnHard"
-          onclick="guess(3)"
-          onmousedown="startTone(3)"
-          onmouseup="stopTone()"
-        ></button>
+        <button id="btnEasy" onclick="startGame(easy)">Easy</button>
+        <button id="btnMedium" onclick="startGame(medium)">Medium</button>
+        <button id="btnHard" onclick="startGame(hard)">Hard</button>
       </div>
 
       <!-- game screen -->
       <div id="gameScreen" class="hidden">
+        <p1>Repeat back the pattern by pressing buttons.</p1>
         <button id="startBtn" onclick="startGame()">Start</button>
 
         <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
@@ -72,7 +55,7 @@
             onmousedown="startTone(4)"
             onmouseup="stopTone()"
           ></button>
-          
+
           <!-- extra buttons for medium, hard -->
           <button
             id="button5"
