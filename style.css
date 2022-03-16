@@ -100,7 +100,26 @@ button {
   height: 50px;
   margin: 2px;
   text-align: center;
-  font-size: 15px
+  font-size: 15px;
+  font-weight: bold;
+  font-family: verdana, arial, sans-serif;
+  color: rgb(240,240,240);
+}
+
+#btnEasy {
+  background: rgb(120, 240, 140);
+}
+
+#btnMedium {
+  background: rgb(237, 238, 90);
+}
+
+#btnHard {
+  background: grey;
+}
+
+#btnImp {
+  background: rgb(240, 120, 120);
 }
 /* images and videos max out at full width */
 img,
