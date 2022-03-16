@@ -22,10 +22,12 @@ function setUpGame(mode) {
 
   switch(mode){
     case "easy":
+      setPattern(4);
       break;
     case "med":
       clueHoldTime = 700;
       document.getElementById("button5").classList.remove("hidden");
+      
       break;
     case "hard":
       clueHoldTime = 500;
@@ -39,21 +41,31 @@ function setUpGame(mode) {
       document.getElementById("button6").classList.remove("hidden");
       break;
   }
-  console.log("start game");
   
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
 
 }
+
+function setPattern(numBtns){
+  pattern = [Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
+            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
+            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
+            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1];
+  console.log(pattern);
+}
+
 function startGame(){
     //initialize game variables
   progress = 0;
   gamePlaying = true;
-    playClueSequence();
+  
   
   //swap the Start and Stop buttons
-  document.getElementById("welcomeScreen").classList.add("hidden");
-  document.getElementById("gameScreen").classList.remove("hidden");
+  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
+  
+  playClueSequence();
 }
 
 function stopGame() {
