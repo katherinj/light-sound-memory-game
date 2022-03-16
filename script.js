@@ -54,6 +54,14 @@ function setPattern(numBtns){
             Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
             Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
             Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1)];
+  console.log(pattern);
+  if(difficulty == "imp"){
+    pattern.push(Math.floor(Math.random() * (numBtns)+1));
+    pattern.push(Math.floor(Math.random() * (numBtns)+1));
+    pattern.push(Math.floor(Math.random() * (numBtns)+1));
+    pattern.push(Math.floor(Math.random() * (numBtns)+1));
+    console.log(pattern);
+  }
 }
 
 function startGame(){
