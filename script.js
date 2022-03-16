@@ -27,18 +27,20 @@ function setUpGame(mode) {
     case "med":
       clueHoldTime = 700;
       document.getElementById("button5").classList.remove("hidden");
-      
+      setPattern(5);
       break;
     case "hard":
       clueHoldTime = 500;
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
+      setPattern(6);
       break;
     case "imp":
       clueHoldTime = 300;
       lives = 0; 
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
+      setPattern(6);
       break;
   }
   
@@ -48,11 +50,10 @@ function setUpGame(mode) {
 }
 
 function setPattern(numBtns){
-  pattern = [Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
-            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
-            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1,
-            Math.random() * (numBtns-1)+1,Math.random() * (numBtns-1)+1];
-  console.log(pattern);
+  pattern = [Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
+            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
+            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
+            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1)];
 }
 
 function startGame(){
@@ -178,6 +179,9 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
-    loseGame();
+    if(lives=0){
+      loseGame();
+    }
+    lives--;
   }
 }
