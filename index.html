@@ -10,16 +10,15 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    
-    
-    <!-- this is the start of content -->
+    <!-- heading -->
     <h1>The Light and Sound Memory Game</h1>
 
-    <p>Welcome to The Game!</p>
-
+    <!-- welcome screen -->
     <div id="welcome screen">
-      <p>Select your difficulty level</p>
-      <div id="difficultyBtnArea">
+      
+      <p>Welcome to The Game!<br>Select your difficulty level</p>
+      
+      <div id="selectDifficultyBtnArea">
         <button
           id="btnEasy"
           onclick="guess(1)"
@@ -40,6 +39,7 @@
         ></button>
       </div>
 
+      <!-- game screen -->
       <div id="gameScreen" class="hidden">
         <button id="startBtn" onclick="startGame()">Start</button>
 
@@ -69,6 +69,22 @@
             onclick="guess(4)"
             onmousedown="startTone(4)"
             onmouseup="stopTone()"
+          ></button>
+          
+          <!-- extra buttons for medium, hard -->
+          <button
+            id="button5"
+            onclick="guess(5)"
+            onmousedown="startTone(5)"
+            onmouseup="stopTone()"
+            class="hidden"
+          ></button>
+          <button
+            id="button6"
+            onclick="guess(6)"
+            onmousedown="startTone(6)"
+            onmouseup="stopTone()"
+            class="hidden"
           ></button>
         </div>
       </div>

@@ -4,13 +4,18 @@ const cluePauseTime = 333;
 const nextClueWaitTime = 1000;
 
 //Gloabal variables
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+var pattern = [];
+var difficulty = "";
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
 
+//set difficulty level 
+function selectDifficulty(btn){
+  difficulty = 
+}
 function startGame() {
   //initialize game variables
   progress = 0;
