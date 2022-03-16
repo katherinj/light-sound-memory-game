@@ -37,7 +37,14 @@ p {
 p2{
   font-size: 15px;
 }
-
+p3{
+    float:left; 
+  display:inline; 
+  position: relative;
+  font-size: 20px;
+  top:30px;
+  text-align: center;
+}
 button {
   padding: 15px;
   border-radius: 6px;
@@ -133,21 +140,4 @@ img,
 video {
   height: auto;
   max-width: 100%;
-}
-
-.lifeCircle {
-  width: 70px;
-  height: 70px;
-  background: red;
-  border-radius: 50%;
-  float:left; 
-  display:inline; 
-  margin: 0.5em;
-}
-.lostLife {
-  border: 1px black solid;
-  border-radius: 100px;
-  height: 100px;
-  width: 100px;
-  background-color: rgb(220,220,220);
 }

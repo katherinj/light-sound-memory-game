@@ -195,9 +195,6 @@ function wrongGuess(){
     
     console.log(lives);
     lives--;
-    document.getElementById("life" + lives).classList.add("lostLife");
-
     wrongGuess();
-    console.log(lives);
   }
 }

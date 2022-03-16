@@ -14,7 +14,7 @@
     <h1>The Light and Sound Memory Game</h1>
 
     <!-- welcome screen -->
-    <div id="welcomeScreen" class = hidden>
+    <div id="welcomeScreen">
       <p>Welcome to The Game!<br />Select your difficulty</p>
 
       <div id="difficultyBtnArea">
@@ -26,7 +26,7 @@
     </div>
     
     <!-- game screen -->
-    <div id="gameScreen" class="">
+    <div id="gameScreen" class="hidden">
       <p1> Repeat back the pattern by pressing buttons</p1><br />
       <p2> Press start to begin the game.</p2><br />
       <button id="startBtn" onclick="startGame()">Start</button><br />
@@ -74,13 +74,6 @@
           onmouseup="stopTone()"
           class="hidden"
         ></button>
-      </div>
-      <div id = "lives" position: relative >
-        <p3> Lives: </p3>
-        
-        <div id = "life3" class = "lifeCircle"></div>
-        <div id = "life2" class = "lifeCircle"></div>
-        <div id = "life1" class = "lifeCircle"></div>
       </div>
     </div>
   </body>
