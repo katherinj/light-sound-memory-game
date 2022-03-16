@@ -14,16 +14,18 @@ var guessCounter = 0;
 
 //set difficulty level 
 function selectDifficulty(btn){
-  difficulty = 
+  difficulty = btn
 }
-function startGame() {
+function startGame(mode) {
   //initialize game variables
   progress = 0;
   gamePlaying = true;
-
+  difficulty = mode;
+  console.log("start game");
+  
   //swap the Start and Stop buttons
-  document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("difficultyBtnArea").classList.add("hidden");
+  document.getElementById("gameScreen").classList.remove("hidden");
   playClueSequence();
 }
 
