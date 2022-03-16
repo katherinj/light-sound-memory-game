@@ -152,6 +152,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
+  disableButtons(true);
   guessCounter = 0;
   let delay = nextClueWaitTime;
   for (let i = 0; i <= progress; i++) {
@@ -160,8 +161,22 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
+  disableButtons(false);
 }
+function disableButtons(disableTheButtons){
+    for(let i=1; i<=6; i++){
+      if(disableTheButtons){
+            document.getElementById("button" + i).disable=true;;
 
+      }
+      else{
+            document.getElementById("button" + i).disable=false;
+
+      }
+      
+    }
+
+}
 function loseGame() {
   stopGame();
   alert("Game Over. You lost.");
