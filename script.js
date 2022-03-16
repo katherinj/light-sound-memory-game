@@ -1,5 +1,4 @@
 //Gloabl constants
-const clueHoldTime = 1000;
 const cluePauseTime = 333;
 const nextClueWaitTime = 1000;
 
@@ -11,6 +10,7 @@ var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
+var clueHoldTime = 1000;
 
 //set difficulty level 
 function selectDifficulty(btn){
@@ -24,7 +24,7 @@ function startGame(mode) {
   console.log("start game");
   
   //swap the Start and Stop buttons
-  document.getElementById("difficultyBtnArea").classList.add("hidden");
+  document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
   playClueSequence();
 }
@@ -44,6 +44,8 @@ const freqMap = {
   2: 329.6,
   3: 392,
   4: 466.2,
+  5: 550,
+  6: 600,
 };
 function playTone(btn, len) {
   o.frequency.value = freqMap[btn];
