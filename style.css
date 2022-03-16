@@ -63,13 +63,15 @@ button {
 
 /*red button*/
 #button1 {
-  background: rgb(255, 176, 170);
+  
+    background-image: "https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400";
+
 }
 #button1:active,
 #button1.lit {
-  background: rgb(168, 50, 50);
-          <img src="https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400" 
-             width="200" height="200"/>
+ /* background: rgb(168, 50, 50);*/
+  background: url('https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400') no-repeat top left;
+
 }
 
 /*orange button*/
@@ -117,7 +119,10 @@ button {
   background: rgb(139, 50, 168);
 }
 
-
+#yellowOpen.active,
+{
+  
+}
 #difficultyBtnArea > button{
   width: 200px;
   height: 50px;
