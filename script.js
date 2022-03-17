@@ -21,6 +21,7 @@ function setUpGame(mode) {
   
   switch (mode) {
     case "easy":
+      clueHoldTime = 1000;
       setPattern(4);
       break;
     case "med":
@@ -164,7 +165,7 @@ function playClueSequence() {
     delay += cluePauseTime;
   }
   clueHoldTime -=10;
-  
+  console.log(tok + "timr");
   setInterval(tik(), 1000);
 }
 
