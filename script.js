@@ -21,7 +21,6 @@ function setUpGame(mode) {
   switch (mode) {
     case "easy":
       setPattern(4);
-      console.log(lives);
       break;
     case "med":
       clueHoldTime = 700;
@@ -161,7 +160,7 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  clueHoldTime -=50;
+  clueHoldTime -=5;
 }
 
 function loseGame() {
