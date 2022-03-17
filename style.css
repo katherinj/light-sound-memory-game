@@ -59,12 +59,14 @@ button {
   background-size: cover;
   width: 500px;
   height: 300px;
+  background-position:center;
 }
 #stopBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
   background-size: cover;
   width: 500px;
   height: 300px;
+    background-position:center;
 }
 
 #gameButtonArea > button {
@@ -73,6 +75,7 @@ button {
   margin: 2px;
   border: none;
   background-size: cover;
+  background-position: bottom;
 }
 
 /*red button*/
@@ -84,7 +87,7 @@ button {
 #button1.lit {
   /* background: rgb(168, 50, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
-  background-size: cover;
+  background-size:cover;
   width: 300px;
   height: 300px;
 }
