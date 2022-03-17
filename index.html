@@ -28,33 +28,22 @@
 
     <!-- game screen -->
     <div id="gameScreen" class="hidden">
-      <p>Repeat back the pattern by pressing buttons</p>
-      <br />
-      <p1> Press start to begin the game.</p1><br />
+      <p>
+        Repeat back the pattern by pressing buttons. Press Start to begin the
+        game.
+      </p>
 
       <div class="gameInfo">
-        <div class="lives" >
-          <img
-            src="https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/cloud.png?v=1647487113225"
-            width="300px"
-            height="300px" 
-          />
-          <div class="livesTxt" >Lives: 
-          </div>
-        </div>
-
         <button id="startBtn" onclick="startGame()"></button>
         <button id="stopBtn" class="hidden" onclick="stopGame()"></button>
-        <div id="timer">
-          <img
-            src="https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/cloud.png?v=1647487113225"
-            width="300px"
-            height="300px"
-          />
-          <p5>Time left: </p5>
-        </div>
-      </div>
+        <br />
 
+        <p3 id="livesTxt">Lives:</p3>
+        <br />
+
+        <p3 id="timer">Time left:</p3>
+        <br />
+      </div>
       <div id="gameButtonArea">
         <button
           id="button1"
@@ -96,7 +85,6 @@
           onmouseup="stopTone()"
           class="hidden"
         ></button>
-        <br />
       </div>
     </div>
   </body>
