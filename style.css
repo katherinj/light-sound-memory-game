@@ -57,8 +57,8 @@ button {
 #startBtn {
 background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
   background-size:cover;
-  width: 800px;
-  height: 800px;
+  width: 820px;
+  height: 417px;
 border: none;
 }
 #stopBtn {
@@ -193,12 +193,6 @@ background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/pu
   background: rgb(240, 120, 120);
 }
 
-.diasbleBtn{
-  cursor: not-allowed;
-}
-.enableBtn{
-  cursor: allowed;
-}
 /* images and videos max out at full width */
 img,
 video {
