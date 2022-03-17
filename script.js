@@ -166,7 +166,7 @@ function playClueSequence() {
   }
   clueHoldTime -=10;
   console.log(tok + "timr");
-  setInterval(tik(), 1000);
+  setInterval(tik(), delay+clueHoldTime);
 }
 
 function tik(){
