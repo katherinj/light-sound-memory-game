@@ -11,6 +11,7 @@
   </head>
   <body>
     <!-- heading -->
+
     <h1>The Light and Sound Memory Game</h1>
 
     <!-- welcome screen -->
@@ -29,7 +30,13 @@
     <div id="gameScreen" class="hidden">
       <p1> Repeat back the pattern by pressing buttons</p1><br />
       <p2> Press start to begin the game.</p2><br />
-      
+
+      <div id="gameInfo">
+        <div id="lives"></div>
+        <button id="startBtn" onclick="startGame()"></button>
+        <button id="stopBtn" class="hidden" onclick="stopGame()"></button>
+        <div id="timer"><img src="myImage.jpg"/></div>
+      </div>
 
       <div id="gameButtonArea">
         <button
@@ -73,12 +80,7 @@
           class="hidden"
         ></button>
         <br />
-        
       </div>
-      
-    <button id="startBtn" onclick="startGame()"></button><br />
-
-      <button id="stopBtn" class="hidden" onclick="stopGame()"></button>
     </div>
   </body>
 </html>
