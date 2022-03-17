@@ -202,23 +202,24 @@ button {
   display: inline;
 }
 
-.lives {
-  display: inline;
-  
-  position: relative;
-  max-width: 250px; /* Maximum width */
-  margin: 0 auto; /* Center it */
-}
-.livesTxt {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 /* images and videos max out at full width */
 img,
 video {
   height: auto;
   max-width: 100%;
+}
+
+.lives img {
+  width: 20%;
+  position: relative;
+}
+.lives .livesTxt {
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 30px;
 }
