@@ -67,6 +67,7 @@ button {
 }
 
 #gameButtonArea > button {
+    margin-top:10px;
   width: 150px;
   height: 150px;
   border: 2;
@@ -75,7 +76,6 @@ button {
 /*red button*/
 #button1 {
   /*background: rgb(255, 176, 170);*/
-  margin-top: 100px;
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_egg.png?v=1647467999757);
   background-size: cover;
   background-position: bottom;
@@ -83,11 +83,8 @@ button {
 #button1:active,
 #button1.lit {
   /* background: rgb(168, 50, 50);*/
-  margin-top:0px;
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*orange button*/
@@ -101,8 +98,6 @@ button {
   /*background: rgb(168, 123, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_open.png?v=1647468042853);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*yellow button*/
@@ -116,8 +111,6 @@ button {
   /*background: rgb(168, 158, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*green button*/
@@ -131,8 +124,6 @@ button {
   /*background: rgb(95, 168, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_open.png?v=1647468023300);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*blue button*/
@@ -146,8 +137,6 @@ button {
   /*background: rgb(50, 111, 168);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_open.png?v=1647467995617);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*purple button*/
@@ -161,8 +150,6 @@ button {
   /*background: rgb(139, 50, 168);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_open.png?v=1647468042765);
   background-size: cover;
-  width: 250px;
-  height: 250px;
 }
 
 /*difficulty buttons*/

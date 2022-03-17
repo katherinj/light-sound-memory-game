@@ -161,11 +161,10 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
+  clueHoldTime -=50;
 }
 
 function loseGame() {
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives - 1;
-
   stopGame();
   alert("Game Over. You lost.");
 }
@@ -175,7 +174,7 @@ function winGame() {
   if (difficulty == "imp") {
     alert("Congratulations! You beat the impossible!");
   } else {
-    alert("Game Over. You won!");
+    alert("Great job! You won!");
   }
 }
 
