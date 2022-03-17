@@ -18,7 +18,7 @@ body {
   font-family: helvetica, arial, sans-serif;
   font-weight: 200;
   line-height: 1.5;
-  background-color: rgb(220,220,220);
+  background-color: rgb(220, 220, 220);
   color: #403e40;
   text-align: center;
 }
@@ -34,15 +34,15 @@ h1 {
 p {
   font-size: 20px;
 }
-p2{
+p2 {
   font-size: 15px;
 }
-p3{
-    float:left; 
-  display:inline; 
+p3 {
+  float: left;
+  display: inline;
   position: relative;
   font-size: 20px;
-  top:30px;
+  top: 30px;
   text-align: center;
 }
 button {
@@ -55,23 +55,21 @@ button {
   display: none;
 }
 #startBtn {
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
-  background-size:cover;
-  width: 820px;
-  height: 417px;
-border: none;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
+  background-size: cover;
+  width: 500px;
+  height: 300px;
 }
 #stopBtn {
-  background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
-background-size:cover;
-  width: 300px;
-  height: 200px;
-  border: none;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
+  background-size: cover;
+  width: 500px;
+  height: 300px;
 }
 
 #gameButtonArea > button {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 2px;
   border: none;
   background-size: cover;
@@ -80,94 +78,93 @@ background-size:cover;
 /*red button*/
 #button1 {
   /*background: rgb(255, 176, 170);*/
-    background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_egg.png?v=1647467999757);
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_egg.png?v=1647467999757);
 }
 #button1:active,
 #button1.lit {
- /* background: rgb(168, 50, 50);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
-  background-size:cover;  
-  width:300px;
-  height:300px;
+  /* background: rgb(168, 50, 50);*/
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 /*orange button*/
 #button2 {
   /*background: rgb(255, 217, 170);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_egg.png?v=1647468042521);
-  background-size:cover;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_egg.png?v=1647468042521);
+  background-size: cover;
 }
 #button2:active,
 #button2.lit {
   /*background: rgb(168, 123, 50);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_open.png?v=1647468042853);
-  background-size:cover;
-    width:300px;
-  height:300px;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange_open.png?v=1647468042853);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 /*yellow button*/
 #button3 {
   /*background: rgb(253, 255, 170);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow_egg.png?v=1647468052543);
-  background-size:cover;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow_egg.png?v=1647468052543);
+  background-size: cover;
 }
 #button3:active,
 #button3.lit {
   /*background: rgb(168, 158, 50);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400);
-  background-size:cover;
-    width:300px;
-  height:300px;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Yellow_open.png?v=1647468110400);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 /*green button*/
 #button4 {
   /*background: rgb(170, 255, 188);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_egg.png?v=1647468023365);
-  background-size:cover;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_egg.png?v=1647468023365);
+  background-size: cover;
 }
 #button4:active,
 #button4.lit {
   /*background: rgb(95, 168, 50);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_open.png?v=1647468023300);
-  background-size:cover;
-    width:300px;
-  height:300px;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_open.png?v=1647468023300);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 /*blue button*/
 #button5 {
   /*background: rgb(170, 204, 255);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_egg.png?v=1647468036576);
-  background-size:cover;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_egg.png?v=1647468036576);
+  background-size: cover;
 }
 #button5:active,
 #button5.lit {
   /*background: rgb(50, 111, 168);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_open.png?v=1647467995617);
-  background-size:cover;
-    width:300px;
-  height:300px;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue_open.png?v=1647467995617);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 /*purple button*/
 #button6 {
   /*background: rgb(251, 170, 255);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_egg.png?v=1647468042816);
-  background-size:cover;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_egg.png?v=1647468042816);
+  background-size: cover;
 }
 #button6:active,
 #button6.lit {
   /*background: rgb(139, 50, 168);*/
-background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_open.png?v=1647468042765);
-  background-size:cover;
-    width:300px;
-  height:300px;
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple_open.png?v=1647468042765);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
-
-#difficultyBtnArea > button{
+#difficultyBtnArea > button {
   width: 200px;
   height: 50px;
   margin: 2px;
