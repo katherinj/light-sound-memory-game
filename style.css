@@ -59,14 +59,15 @@ button {
   background-size: cover;
   width: 400px;
   height: 200px;
-  background-position:center;
+  background-position: center;
+  position: top;
 }
 #stopBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
   background-size: cover;
   width: 400px;
   height: 200px;
-    background-position:center;
+  background-position: center;
 }
 
 #gameButtonArea > button {
@@ -87,7 +88,7 @@ button {
 #button1.lit {
   /* background: rgb(168, 50, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red_open.png?v=1647468045971);
-  background-size:cover;
+  background-size: cover;
   width: 250px;
   height: 250px;
 }
@@ -194,14 +195,27 @@ button {
   background: rgb(240, 120, 120);
 }
 
-#lives{
-  display:inline;
+#lives {
+  display: inline;
 }
-#timer{
-  display:inline;
+#timer {
+  display: inline;
 }
-#startBtn{
-  
+
+.lives {
+  display: inline;
+
+  position: relative;
+  max-width: 250px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+.lives .livesTxt {
+  position: absolute; /* Position the background text */
+  top: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
 }
 
 /* images and videos max out at full width */
