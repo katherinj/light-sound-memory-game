@@ -89,6 +89,8 @@ function stopGame() {
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
+      document.getElementById("timer").innerHTML = "";
+
 }
 
 // Sound Synthesis Functions
@@ -149,13 +151,12 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
   context.resume();
 
   guessCounter = 0;
   let delay = nextClueWaitTime;
-  tok = progress;
+  tok = progress+2;
   for (let i = 0; i <= progress; i++) {
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
@@ -163,17 +164,19 @@ function playClueSequence() {
     delay += cluePauseTime;
   }
   clueHoldTime -=10;
-  setInterval(tik, 1000);
+  
+  setInterval(tik(), 1000);
 }
 
 function tik(){
+    document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
   if(tok<0){
+    clearInterval();
     alert("Game over. You ran out of time");
     stopGame();
-    clearInterval();
+    
   } 
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
   
 }
