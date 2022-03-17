@@ -150,8 +150,11 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
+disableButtons(true);  
+  console.log(document.getElementById(button1).classList("disableBtn"));
   context.resume();
-  //disableButtons(true);
+  
+  
   guessCounter = 0;
   let delay = nextClueWaitTime;
   for (let i = 0; i <= progress; i++) {
@@ -160,14 +163,21 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  //disableButtons(false);
+  disableButtons(false);
 }
 
 //disable/enable buttons
 function disableButtons(disableTheButtons){
   console.log(disableTheButtons);
     for(let i=1; i<=6; i++){
-            document.getElementById("button" + i).disabled=disableTheButtons;
+      console.log(disableTheButtons);
+        if(disableTheButtons){
+                      document.getElementById("button" + i).classList.add("disableBtn");
+
+        }else{
+                      document.getElementById("button" + i).classList.remove("disableBtn");
+
+        }
     }
 }
 

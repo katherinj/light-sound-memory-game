@@ -178,6 +178,10 @@ background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/pu
 #btnImp {
   background: rgb(240, 120, 120);
 }
+
+.diasbleBtn{
+  pointer-events: none;
+}
 /* images and videos max out at full width */
 img,
 video {
