@@ -155,9 +155,7 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
-  disableButtons(true);
   context.resume();
-  console.log("disabled or not: " + document.getElementById("button1").disabled);
 
   guessCounter = 0;
   let delay = nextClueWaitTime;
@@ -167,33 +165,6 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  disableButtons(false);
-  
-  console.log(document.getElementById("button1").disabled);
-}
-
-//disable/enable buttons
-function disableButtons(disableTheButtons) {
-  console.log(disableTheButtons);
-  // for (let i = 1; i <= 6; i++) {
-  //   if (disableTheButtons) {
-  //     document.getElementById("button" + i).disabled = true;
-  //   } else {
-  //     document.getElementById("button"+i).disabled = false;
-  //   }
-  // }
-  document.getElementById("button1").disabled = disableTheButtons;
-  document.getElementById("button1").classList.add("disableBtn");
-  document.getElementById("button2").disabled = disableTheButtons;
-  
-  document.getElementById("button3").disabled = disableTheButtons;
-  
-  document.getElementById("button4").disabled = disableTheButtons;
-  
-  document.getElementById("button5").disabled = disableTheButtons;
-  
-  document.getElementById("button6").disabled = disableTheButtons;
-  
 }
 
 function loseGame() {

@@ -29,9 +29,7 @@
     <div id="gameScreen" class="hidden">
       <p1> Repeat back the pattern by pressing buttons</p1><br />
       <p2> Press start to begin the game.</p2><br />
-      <button id="startBtn" onclick="startGame()">Start</button><br />
-
-      <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+      
 
       <div id="gameButtonArea">
         <button
@@ -74,6 +72,10 @@
           onmouseup="stopTone()"
           class="hidden"
         ></button>
+        <br />
+        <button id="startBtn" onclick="startGame()"></button><br />
+
+      <button id="stopBtn" class="hidden" onclick="stopGame()"></button>
       </div>
     </div>
   </body>
