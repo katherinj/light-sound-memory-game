@@ -203,7 +203,7 @@ button {
 }
 
 .lives {
-  display: block;
+  display: inline;
   
   position: relative;
   max-width: 250px; /* Maximum width */
@@ -216,7 +216,9 @@ button {
     transform: translate( -50%, -50% );
     text-align: center;
 }
-
+.gameInfo{
+  display:inline;
+}
 
 /* images and videos max out at full width */
 img,
