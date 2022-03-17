@@ -11,13 +11,13 @@ var tonePlaying = false;
 var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
 var clueHoldTime = 1000;
-var lives = 3; 
+var lives = 3;
 
 function setUpGame(mode) {
   //set difficulty level
   difficulty = mode;
 
-  switch(mode){
+  switch (mode) {
     case "easy":
       setPattern(4);
       console.log(lives);
@@ -40,49 +40,54 @@ function setUpGame(mode) {
       setPattern(6);
       break;
   }
-  
+
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
-
 }
 
-function setPattern(numBtns){
-  pattern = [Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
-            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
-            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1),
-            Math.floor(Math.random() * (numBtns)+1),Math.floor(Math.random() * (numBtns)+1)];
+function setPattern(numBtns) {
+  pattern = [
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+  ];
   console.log(pattern);
-  if(difficulty == "imp"){
-    pattern.push(Math.floor(Math.random() * (numBtns)+1));
-    pattern.push(Math.floor(Math.random() * (numBtns)+1));
-    pattern.push(Math.floor(Math.random() * (numBtns)+1));
-    pattern.push(Math.floor(Math.random() * (numBtns)+1));
+  if (difficulty == "imp") {
+    pattern.push(Math.floor(Math.random() * numBtns + 1));
+    pattern.push(Math.floor(Math.random() * numBtns + 1));
+    pattern.push(Math.floor(Math.random() * numBtns + 1));
+    pattern.push(Math.floor(Math.random() * numBtns + 1));
     console.log(pattern);
   }
 }
 
-function startGame(){
+function startGame() {
   //initialize lives
-  if(difficulty == "imp"){
-    lives = 1; 
-  }else{
+  if (difficulty == "imp") {
+    lives = 1;
+  } else {
     lives = 3;
   }
-    //initialize game variables
+  //initialize game variables
   progress = 0;
   gamePlaying = true;
-  
+
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
-  
+
   playClueSequence();
 }
 
 function stopGame() {
   //update game variable
   gamePlaying = false;
-  
+
   //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
   document.getElementById("gameScreen").classList.add("hidden");
@@ -150,11 +155,9 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
-disableButtons(true);  
-  console.log(document.getElementById(button1).classList("disableBtn"));
+  disableButtons(true);
   context.resume();
-  
-  
+
   guessCounter = 0;
   let delay = nextClueWaitTime;
   for (let i = 0; i <= progress; i++) {
@@ -167,30 +170,30 @@ disableButtons(true);
 }
 
 //disable/enable buttons
-function disableButtons(disableTheButtons){
+function disableButtons(disableTheButtons) {
   console.log(disableTheButtons);
-    for(let i=1; i<=6; i++){
-      console.log(disableTheButtons);
-        if(disableTheButtons){
-                      document.getElementById("button" + i).classList.add("disableBtn");
-
-        }else{
-                      document.getElementById("button" + i).classList.remove("disableBtn");
-
-        }
+  for (let i = 1; i <= 6; i++) {
+    console.log(disableTheButtons == true);
+    if (disableTheButtons) {
+      console.log("diable");
+      document.getElementById("button" + i).disabled = true;
+    } else {
+      console.log("enable");
+      document.getElementById("button"+i).disabled = false;
     }
+  }
 }
 
 function loseGame() {
   stopGame();
-  alert("Game Over. You lost.");  
+  alert("Game Over. You lost.");
 }
 
 function winGame() {
   stopGame();
-  if(difficulty == "imp"){
+  if (difficulty == "imp") {
     alert("Congratulations! You beat the impossible!");
-  }else{
+  } else {
     alert("Game Over. You won!");
   }
 }
@@ -200,10 +203,10 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-function wrongGuess(){
-  alert("Wrong guess. You have " + lives + " lives left. Try again!");
-  playClueSequence();
-}
+  function wrongGuess() {
+    alert("Wrong guess. You have " + lives + " lives left. Try again!");
+    playClueSequence();
+  }
   //game logic
   //guess correct
   if (btn == pattern[guessCounter]) {
@@ -220,11 +223,11 @@ function wrongGuess(){
       guessCounter++;
     }
   } else {
-    if(lives==1){
+    if (lives == 1) {
       loseGame();
       return;
     }
-    
+
     lives--;
     wrongGuess();
   }

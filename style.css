@@ -180,7 +180,7 @@ background:url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/pu
 }
 
 .diasbleBtn{
-  pointer-events: none;
+  cursor: not-allowed;
 }
 /* images and videos max out at full width */
 img,
