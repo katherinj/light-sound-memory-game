@@ -34,7 +34,7 @@ h1 {
 p {
   font-size: 20px;
 }
-p2 {
+p1 {
   font-size: 15px;
 }
 p3 {
@@ -167,6 +167,7 @@ button {
   height: 250px;
 }
 
+/*difficulty buttons*/
 #difficultyBtnArea > button {
   width: 200px;
   height: 50px;
@@ -191,6 +192,16 @@ button {
 
 #btnImp {
   background: rgb(240, 120, 120);
+}
+
+#lives{
+  display:inline;
+}
+#timer{
+  display:inline;
+}
+#startBtn{
+  
 }
 
 /* images and videos max out at full width */
