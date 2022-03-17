@@ -12,12 +12,13 @@ var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
 var clueHoldTime = 1000;
 var lives = 3;
-
+var tok = 0;
 function setUpGame(mode) {
   //set difficulty level
   difficulty = mode;
   lives = 3;
-
+  tok = 0;
+  
   switch (mode) {
     case "easy":
       setPattern(4);
@@ -154,15 +155,28 @@ function playClueSequence() {
 
   guessCounter = 0;
   let delay = nextClueWaitTime;
+  tok = progress;
   for (let i = 0; i <= progress; i++) {
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  clueHoldTime -=5;
+  clueHoldTime -=10;
+  setInterval(tik, 1000);
 }
 
+function tik(){
+  tok--;
+  if(tok<0){
+    alert("Game over. You ran out of time");
+    stopGame();
+    clearInterval();
+  } 
+  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+
+  
+}
 function loseGame() {
   stopGame();
   alert("Game Over. You lost.");
