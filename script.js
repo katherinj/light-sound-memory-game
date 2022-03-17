@@ -16,6 +16,7 @@ var lives = 3;
 function setUpGame(mode) {
   //set difficulty level
   difficulty = mode;
+  lives = 3;
 
   switch (mode) {
     case "easy":
@@ -38,24 +39,22 @@ function setUpGame(mode) {
       document.getElementById("button5").classList.remove("hidden");
       document.getElementById("button6").classList.remove("hidden");
       setPattern(6);
+      lives = 1;
       break;
   }
 
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
+  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 }
 
 function setPattern(numBtns) {
   pattern = [
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1),
-  ];
+    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1)];
+  
   console.log(pattern);
   if (difficulty == "imp") {
     pattern.push(Math.floor(Math.random() * numBtns + 1));
@@ -67,12 +66,6 @@ function setPattern(numBtns) {
 }
 
 function startGame() {
-  //initialize lives
-  if (difficulty == "imp") {
-    lives = 1;
-  } else {
-    lives = 3;
-  }
   //initialize game variables
   progress = 0;
   gamePlaying = true;
@@ -80,6 +73,7 @@ function startGame() {
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
   playClueSequence();
 }
@@ -155,6 +149,8 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
+  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+
   context.resume();
 
   guessCounter = 0;
@@ -168,6 +164,8 @@ function playClueSequence() {
 }
 
 function loseGame() {
+  document.getElementById("livesTxt").innerHTML = "Lives: " + lives - 1;
+
   stopGame();
   alert("Game Over. You lost.");
 }
