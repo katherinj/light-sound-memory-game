@@ -166,21 +166,17 @@ function playClueSequence() {
   }
   clueHoldTime -=10;
   console.log(tok + "timr");
-  setInterval(tik(), delay+clueHoldTime);
+  setTimeout(tik(), 1000);
 }
 
 function tik(){
     document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
-  if(tok<0){
-    clearInterval();
-    alert("Game over. You ran out of time");
-    stopGame();
-    
-  } 
-
+  
+  
   
 }
+
 function loseGame() {
   stopGame();
   alert("Game Over. You lost.");
