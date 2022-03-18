@@ -13,6 +13,8 @@ var guessCounter = 0;
 var clueHoldTime = 1000;
 var lives = 3;
 var tok = 0;
+var myInterval;
+
 function setUpGame(mode) {
   //set difficulty level
   difficulty = mode;
@@ -164,15 +166,23 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
+  
   clueHoldTime -=10;
-  console.log(tok + "timr");
-  setTimeout(tik(), 1000);
+
+  if(gamePlaying){
+      console.log(tok + "timr");
+  myInterval = setInterval(tik(), 1000);
+  }
 }
 
 function tik(){
     document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
   
+  if(tok == 0){
+    clearInterval(myInterval);
+    loseGame();
+  }
   
   
 }
