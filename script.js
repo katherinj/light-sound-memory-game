@@ -14,6 +14,7 @@ var clueHoldTime = 1000;
 var lives = 3;
 var tok = 0;
 var myInterval;
+var intervalVar;
 
 function setUpGame(mode) {
   //set difficulty level
@@ -72,7 +73,8 @@ function startGame() {
   //initialize game variables
   progress = 0;
   gamePlaying = true;
-
+  intervalVar = true;
+  
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -169,17 +171,18 @@ function playClueSequence() {
   
   clueHoldTime -=10;
 
-  if(gamePlaying){
+  if(gamePlaying||intervalVar){
       console.log(tok + "timr");
   myInterval = setInterval(tik(), 1000);
   }
+  intervalVar = false;
 }
 
 function tik(){
     document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
   
-  if(tok == 0){
+  if(tok == 0 || !gamePlaying){
     clearInterval(myInterval);
     loseGame();
   }
