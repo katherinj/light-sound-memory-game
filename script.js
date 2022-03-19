@@ -21,7 +21,7 @@ function setUpGame(mode) {
   difficulty = mode;
   lives = 3;
   tok = 0;
-  
+
   switch (mode) {
     case "easy":
       clueHoldTime = 1000;
@@ -54,11 +54,16 @@ function setUpGame(mode) {
 
 function setPattern(numBtns) {
   pattern = [
-    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1),
-    Math.floor(Math.random() * numBtns + 1), Math.floor(Math.random() * numBtns + 1)];
-  
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+    Math.floor(Math.random() * numBtns + 1),
+  ];
+
   console.log(pattern);
   if (difficulty == "imp") {
     pattern.push(Math.floor(Math.random() * numBtns + 1));
@@ -74,7 +79,7 @@ function startGame() {
   progress = 0;
   gamePlaying = true;
   intervalVar = true;
-  
+
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -86,7 +91,8 @@ function startGame() {
 function stopGame() {
   //update game variable
   gamePlaying = false;
-
+  clearInterval(myInterval);
+  console.log("ended game");
   //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
   document.getElementById("gameScreen").classList.add("hidden");
@@ -94,8 +100,7 @@ function stopGame() {
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
-      document.getElementById("timer").innerHTML = "";
-
+  document.getElementById("timer").innerHTML = "";
 }
 
 // Sound Synthesis Functions
@@ -156,45 +161,43 @@ function playSingleClue(btn) {
 }
 
 function playClueSequence() {
-
   context.resume();
 
   guessCounter = 0;
+  clearInterval(myInterval);
   let delay = nextClueWaitTime;
-  tok = progress+2;
+  tok = progress + 2;
   for (let i = 0; i <= progress; i++) {
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  
-  clueHoldTime -=10;
+
+  clueHoldTime -= 10;
   tok = 20;
-  if(gamePlaying||intervalVar){
-      console.log(tok + "timr");
-  myInterval = setInterval("tik()", 1000);
+  if (gamePlaying || intervalVar) {
+    console.log(tok + "timr");
+    myInterval = setInterval("tik()", 1000);
   }
   intervalVar = false;
   document.getElementById("timer").innerHTML = "";
 }
 
-function tik(){
-    document.getElementById("timer").innerHTML = "Time left: " + tok;
+function tik() {
+  document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
-  console.log(tok+ "before");
-  if(tok <= 0 ){
+  console.log(tok + "before");
+  if (tok <= 0) {
     clearInterval(myInterval);
     loseGame();
-    console.log("loose game" + tok )
+    console.log("loose game" + tok);
   }
-  
-  
 }
 
 function loseGame() {
-  stopGame();
   alert("Game Over. You lost.");
+  stopGame();
 }
 
 function winGame() {
