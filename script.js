@@ -216,6 +216,8 @@ function guess(btn) {
   }
   function wrongGuess() {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
+      document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+
     playClueSequence();
   }
   //game logic
