@@ -1,10 +1,7 @@
-/* a minimalist set of CSS resets */
-
-/* default to border-box */
 html {
   box-sizing: border-box;
   font-size: 16px;
-  background-image: linear-gradient(
+    background-image: linear-gradient(
     to top left,
     #B2E4ED,
     #F4ECDB,
@@ -13,7 +10,7 @@ html {
     #EDDEFD,
     #E8F4E5
   );
-  border: 10px solid black;
+  height: 100%;
 }
 
 *,
@@ -26,23 +23,22 @@ html {
 body {
   margin: 2em;
   font-family: verdana, arial, sans-serif;
-/*   font-weight: 200;
-  line-height: 1.5; */
-/*   background-color: rgb(220, 220, 220);
-  color: #403e40; */
+  font-weight: 200;
+  line-height: 1.5;
   text-align: center;
-
+font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
-  font-family: verdana, arial, sans-serif;
+/*   font-family: verdana, arial, sans-serif; */
   font-weight: lighter;
   font-size: 50px;
-  text-shadow: 3px 3px black;
-  text-align: center;
+/*   text-shadow: 3px 3px black; */
+
   text-align: center;
   letter-spacing: 5px;
-  color: #73677f;
+  color: #6B898E;
+  font-family: 'Quicksand', sans-serif;
 }
 
 p {
