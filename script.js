@@ -13,6 +13,7 @@ var guessCounter = 0;
 var clueHoldTime = 1000;
 var lives = 3;
 var tok = 0;
+var tempVar = 0; 
 var myInterval;
 var intervalVar;
 
