@@ -176,32 +176,32 @@ button {
 }
 
 #btnEasy {
-/*   background: rgb(120, 240, 140); */
-  background: 	#baffc9;
+  background: rgb(185, 255, 200);
 }
 #btnEasy:hover {
-/*   background: rgb(120, 240, 140); */
-  background: 	#baffc9;
+  background: rgb(200, 255, 220);
 }
 
 
 #btnMed {
-/*   background: rgb(240, 240, 120); */
-background:	#ffffba;
+background:	rgb(255, 255, 185);
+}
+#btnMed:hover {
+background:	rgb(255, 255, 210);
 }
 
 #btnHard {
-/*   background: grey; */
-179, 179, 179
+background: rgb(220, 220, 220);
+}
+#btnHard:hover {
+background: rgb(230, 225, 230);
 }
 
 #btnImp {
-/*   background: rgb(240, 120, 120);*/
   background: rgb(255,180,185);
 }
 #btnImp:hover {
-/*   background: rgb(240, 120, 120);*/
-  background: rgb(255,185,195);
+  background: rgb(255,185,200);
 }
 
 #lives {
