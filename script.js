@@ -170,21 +170,23 @@ function playClueSequence() {
   }
   
   clueHoldTime -=10;
-
+  tok = 20;
   if(gamePlaying||intervalVar){
       console.log(tok + "timr");
-  myInterval = setInterval(tik(), 1000);
+  myInterval = setInterval("tik()", 1000);
   }
   intervalVar = false;
+  document.getElementById("timer").innerHTML = "";
 }
 
 function tik(){
     document.getElementById("timer").innerHTML = "Time left: " + tok;
   tok--;
-  
-  if(tok == 0 || !gamePlaying){
+  console.log(tok+ "before");
+  if(tok <= 0 ){
     clearInterval(myInterval);
     loseGame();
+    console.log("loose game" + tok )
   }
   
   
