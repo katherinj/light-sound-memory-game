@@ -4,7 +4,13 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  
+    background: url("https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/farm.jpg?v=1647724407743") no-repeat center center fixed; 
+
+  background-size: cover;
 }
+
+
 
 *,
 *:before,
@@ -18,7 +24,9 @@ body {
   font-family: verdana, arial, sans-serif;
   font-weight: 200;
   line-height: 1.5;
-  background-color: rgb(220, 220, 220);
+/*   background-color: rgb(220, 220, 220);
+   */
+  
   color: #403e40;
   text-align: center;
 

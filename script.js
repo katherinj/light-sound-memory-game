@@ -101,7 +101,7 @@ function stopGame() {
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
-  document.getElementById("timer").innerHTML = "";
+  document.getElementById("timerTxt").innerHTML = "";
 }
 
 // Sound Synthesis Functions
@@ -182,11 +182,11 @@ function playClueSequence() {
     myInterval = setInterval("tik()", 1000);
   }
   intervalVar = false;
-  document.getElementById("timer").innerHTML = "";
+  document.getElementById("timerTxt").innerHTML = "";
 }
 
 function tik() {
-  document.getElementById("timer").innerHTML = "Time left: " + tok;
+  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
   tok--;
   console.log(tok + "before");
   if (tok <= 0) {
