@@ -4,9 +4,17 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-image: linear-gradient(
+    to top left,
+    #B2E4ED,
+    #F4ECDB,
+    #F9F9F9,
+    #FFE5F7,
+    #EDDEFD,
+    #E8F4E5
+  );
+  border: 10px solid black;
 }
-
-
 
 *,
 *:before,
@@ -18,12 +26,10 @@ html {
 body {
   margin: 2em;
   font-family: verdana, arial, sans-serif;
-  font-weight: 200;
-  line-height: 1.5;
-  background-color: rgb(220, 220, 220);
-
-  
-  color: #403e40;
+/*   font-weight: 200;
+  line-height: 1.5; */
+/*   background-color: rgb(220, 220, 220);
+  color: #403e40; */
   text-align: center;
 
 }
@@ -31,18 +37,12 @@ body {
 h1 {
   font-family: verdana, arial, sans-serif;
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 50px;
+  text-shadow: 3px 3px black;
   text-align: center;
-  color: #2e2d2e;
-  
-  
-  font-family: "Bangers", cursive;
+  text-align: center;
   letter-spacing: 5px;
-  color: #FFFF99;
-  text-shadow: 2px 2px black;
-  font-size: 4em;
-  text-align: center;
-
+  color: #73677f;
 }
 
 p {
@@ -58,8 +58,7 @@ button {
   padding: 15px;
   border-radius: 6px;
   text-align: center;
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .hidden {
@@ -84,7 +83,7 @@ button {
 }
 
 #gameButtonArea > button {
-    margin-top:10px;
+  margin-top: 10px;
   width: 150px;
   height: 150px;
   border: none;
