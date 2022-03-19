@@ -36,6 +36,13 @@ h1 {
   color: #2e2d2e;
   
   
+  font-family: "Bangers", cursive;
+  letter-spacing: 5px;
+  color: #FFFF99;
+  text-shadow: 2px 2px black;
+  font-size: 4em;
+  text-align: center;
+
 }
 
 p {
