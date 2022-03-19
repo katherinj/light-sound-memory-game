@@ -58,13 +58,19 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+A challenge that I faced at the beginning of the project was trying to figure out why the startGame() and stopGame() functions were not toggling the startBtn and stopBtn. I knew something must be misspelled but I could not pinpoint where in the code. After a frustrating 10-15 minutes of looking over the code and trying to find the error, I decided to try using the console screen. The console revealed a TypeError in the getElementById line of code, and quickly I was able to realize I had looked over a small spelling error where I had capitalized the “ID” part. This is the first time I am using Glitch as well as using HTML and JavaScript. Learning how to use the console was very valuable to helping solve problems in my code.
+When I finished the initial part of the project, I moved onto the optional features. I added 4 different difficulty levels a player could choose from. Having the knowledge of the console screen helped me a lot in creating these features. I also moved onto using images instead of colors. I was having issues with making the images show up on the buttons. However, after reading up on how to use images with buttons, I was able to solve this issue.   
+
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+A question I have about web development would be how to implement containers in order to align elements. After implementing the feature where a player has a certain amount of lives, I wanted to be able to display the remaining lives right on the screen.  However, I found it difficult to align the life circles properly in relation to the buttons. I was reading up on it, and it seems like I would have to learn more about containers in order to implement this feature. Also, I would have liked to have more time to find out why I wasn’t able to disable the buttons when I wanted them to be disabled. 
+
+
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+The biggest thing I wish I had been able to add to this project would be disabling the buttons when the tones are playing. This would prevent a user from being able to click a button while the tones are playing. After reading online on how to possibly implement this feature, I spent some time trying to use the disable property of buttons. However, I was not able to finish this feature. 
+Also, I would have liked to have  added an option to continue onto the next level if you win the game at a level before Impossible. I was reading online on how to do it, and it seemed like I would have had to replace the alert box with something else where user could select their option to continue or go back to the main page. This is something I would have definitely liked to learn more about and implement in the project. 
+I also tested my program on multiple devices, and I would have liked to be able to format the buttons so that on smaller screens, the 6th button of the Impossible level would not be sent to the next line, and instead the buttons would be resized so they fit on the page. 
 
 
 
@@ -75,7 +81,7 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright [Katherin Jimenez]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
