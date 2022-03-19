@@ -14,6 +14,7 @@ var clueHoldTime = 1000;
 var lives = 3;
 var tok = 0;
 var tempVar = 0; 
+var lol = 0; 
 var myInterval;
 var intervalVar;
 
