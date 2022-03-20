@@ -149,11 +149,19 @@ g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
 
-function lightButton(btn) {
-  document.getElementById("button" + btn).classList.add("lit");
+function lightButton(btn, wrong) {
+  if(wrong){
+      document.getElementById("button" + btn).classList.add("wrong");
+
+  }else{
+      document.getElementById("button" + btn).classList.add("lit");
+
+  }
 }
-function clearButton(btn) {
+function clearButton(btn, wrong) {
   document.getElementById("button" + btn).classList.remove("lit");
+    document.getElementById("button" + btn).classList.remove("wrong");
+
 }
 function playSingleClue(btn) {
   if (gamePlaying) {
@@ -243,7 +251,7 @@ function guess(btn) {
       loseGame();
       return;
     }
-
+lightButton()
     lives--;
     wrongGuess();
   }
