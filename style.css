@@ -74,8 +74,8 @@ button {
 
 #gameButtonArea > button {
   margin-top: 10px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: none;
 }
 
@@ -122,7 +122,8 @@ button {
 /*green button*/
 #button4 {
   /*background: rgb(170, 255, 188);*/
-  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_egg.png?v=1647468023365);
+/*   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green_egg.png?v=1647468023365); */
+background: url("https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green-egg%20(1).png?v=1647734869213");
   background-size: cover;
 }
 #button4:active,
