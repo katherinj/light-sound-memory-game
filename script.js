@@ -149,16 +149,24 @@ g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
 
-function lightButton(btn){
-      document.getElementById("button" + btn).classList.add("lit");
+function lightButton(btn, wrong) {
+  if(wrong){
+      document.getElementById("button" + btn).classList.add("wrong");
+
+  }else{
+          document.getElementById("button" + btn).classList.add("lit");
+
+  }
 }
-function clearButton(btn){
+function clearButton(btn) {
   document.getElementById("button" + btn).classList.remove("lit");
+    document.getElementById("button" + btn).classList.remove("wrong");
 
 }
 function playSingleClue(btn) {
+  var correct = btn == pattern[guessCounter];
   if (gamePlaying) {
-    lightButton(btn);
+    lightButton(btn,btn == pattern[guessCounter]);
     playTone(btn, clueHoldTime);
     setTimeout(clearButton, clueHoldTime, btn);
   }
@@ -178,7 +186,7 @@ function playClueSequence() {
     delay += cluePauseTime;
   }
   tok = 20;
-    myTimeout = setTimeout("myTimer()", delay);
+  myTimeout = setTimeout("myTimer()", delay);
 }
 
 function myTimer() {
@@ -194,8 +202,7 @@ function tik() {
     loseGame();
     console.log("loose game" + tok);
   }
-    document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
-
+  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
 }
 
 function loseGame() {
@@ -217,16 +224,10 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-        if (btn != pattern[guessCounter]) {
-            document.getElementById("button" + btn).classList.add("wrong");
 
-    }
   function wrongGuess() {
-    
-
-    
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
-      document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+    document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
     playClueSequence();
   }
@@ -247,11 +248,13 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
+    if (btn != pattern[guessCounter]) {
+      lightButton(btn, true);
+    }
     if (lives == 1) {
       loseGame();
       return;
     }
-
     lives--;
     wrongGuess();
   }
