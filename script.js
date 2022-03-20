@@ -15,6 +15,7 @@ var lives = 3;
 var tok = 0;
 
 var myInterval;
+var myTimeout;
 var intervalVar;
 
 function setUpGame(mode) {
@@ -177,16 +178,27 @@ function playClueSequence() {
 
   clueHoldTime -= 10;
   tok = 20;
-  if (gamePlaying || intervalVar) {
-    console.log(tok + "timr");
-    myInterval = setInterval("tik()", 1000);
+    setTimeout(function () {
+    tok();
+  }, delay);
+  
+    myInterval = setInterval("myTimer()", 1000);
+}
+
+function myTimer() {
+  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
+  tok--;
+  console.log(tok + "before");
+  myT
+  if (tok <= 0) {
+    clearInterval(myInterval);
+    loseGame();
+    console.log("loose game" + tok);
   }
-  intervalVar = false;
-  document.getElementById("timerTxt").innerHTML = "";
 }
 
 function tik() {
-  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
+    document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
   tok--;
   console.log(tok + "before");
   if (tok <= 0) {
