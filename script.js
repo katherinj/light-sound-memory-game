@@ -175,37 +175,25 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-
-  clueHoldTime -= 10;
   tok = 20;
-    setTimeout(function () {
-    tok();
-  }, delay);
-  
-    myInterval = setInterval("myTimer()", 1000);
+    myTimeout = setTimeout("myTimer()", delay);
 }
 
 function myTimer() {
-  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
-  tok--;
-  console.log(tok + "before");
-  myT
-  if (tok <= 0) {
-    clearInterval(myInterval);
-    loseGame();
-    console.log("loose game" + tok);
-  }
+  console.log("mytimer()");
+  myInterval = setInterval("tik()", 1000);
 }
 
 function tik() {
-    document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
   tok--;
-  console.log(tok + "before");
+  console.log("my tik() " + tok);
   if (tok <= 0) {
-    clearInterval(myInterval);
+    clearTimeout(clearTimeout);
     loseGame();
     console.log("loose game" + tok);
   }
+    document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
+
 }
 
 function loseGame() {
