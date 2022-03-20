@@ -76,7 +76,7 @@ button {
   margin-bottom: 30px;
   width: 200px;
   height: 200px;
-/*   border: 10px solid black; */
+  border: none;
 }
 
 /*red button*/
@@ -84,7 +84,6 @@ button {
   /*background: rgb(255, 176, 170);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red-egg.png?v=1647746527378);
   background-size: cover;
-  background-position: bottom;
 }
 #button1:active,
 #button1.lit {
