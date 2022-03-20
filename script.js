@@ -217,13 +217,20 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
+        if (btn != pattern[guessCounter]) {
+            document.getElementById("button" + btn).classList.add("wrong");
+
+    }
   function wrongGuess() {
+    
+
     
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
       document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
     playClueSequence();
   }
+
   //game logic
   //guess correct
   if (btn == pattern[guessCounter]) {
@@ -244,6 +251,7 @@ function guess(btn) {
       loseGame();
       return;
     }
+
     lives--;
     wrongGuess();
   }
