@@ -14,11 +14,13 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
+    
     <!-- heading -->
     <h1>The Light and Sound Memory Game</h1>
 
     <!-- welcome screen -->
     <div id="welcomeScreen">
+    
       <p>Welcome to The Game!<br />Select your difficulty</p>
 
       <div id="difficultyBtnArea">
@@ -27,26 +29,34 @@
         <button id="btnHard" onclick="setUpGame('hard')">Hard</button><br />
         <button id="btnImp" onclick="setUpGame('imp')">Impossible</button>
       </div>
+    
     </div>
 
     <!-- game screen -->
     <div id="gameScreen" class="hidden">
+      
       <p>
         Repeat back the pattern by pressing buttons. <br />Press Start to begin the
         game.
       </p>
 
       <div class="gameInfo">
+      
         <button id="startBtn" onclick="startGame()"></button>
         <button id="stopBtn" class="hidden" onclick="stopGame()"></button>
 
         <br />
+        
         <div id="livesTxt">Lives:</div>
+        
         <br />
 
         <div id="timerTxt"></div>
+        
         <br />
+      
       </div>
+      
       <div id="gameButtonArea">
         <button
           id="button1"
