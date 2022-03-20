@@ -94,6 +94,7 @@ function stopGame() {
   //update game variable
   gamePlaying = false;
   clearInterval(myInterval);
+  clearTimeout(myTimeout);
   console.log("ended game");
   //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
