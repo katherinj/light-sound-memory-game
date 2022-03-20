@@ -125,6 +125,9 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
+  if(gamePlaying && btn == pattern[btn]){
+    lightButton(btn,true);
+  }
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -164,9 +167,8 @@ function clearButton(btn) {
 
 }
 function playSingleClue(btn) {
-  var correct = btn == pattern[guessCounter];
   if (gamePlaying) {
-    lightButton(btn,btn == pattern[guessCounter]);
+    lightButton(btn);
     playTone(btn, clueHoldTime);
     setTimeout(clearButton, clueHoldTime, btn);
   }
@@ -190,18 +192,16 @@ function playClueSequence() {
 }
 
 function myTimer() {
-  console.log("mytimer()");
   myInterval = setInterval("tik()", 1000);
 }
 
 function tik() {
   tok--;
-  console.log("my tik() " + tok);
   if (tok <= 0) {
     clearTimeout(clearTimeout);
     loseGame();
-    console.log("loose game" + tok);
   }
+  
   document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
 }
 
