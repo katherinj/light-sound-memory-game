@@ -217,6 +217,7 @@ function guess(btn) {
     return;
   }
   function wrongGuess() {
+    
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
       document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
