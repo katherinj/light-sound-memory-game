@@ -125,11 +125,12 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
-  if (gamePlaying && btn == pattern[btn]) {
+  if (gamePlaying) {
+    lightButton(btn, btn == pattern[btn]);
+  } else {
     lightButton(btn, false);
-  }else{
-    lightButton(btn, true);
   }
+
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -163,6 +164,7 @@ function lightButton(btn, wrong) {
   }
 }
 function clearButton(btn) {
+  document.getElementById("button" + btn).classList.add("normal");
   document.getElementById("button" + btn).classList.remove("lit");
   document.getElementById("button" + btn).classList.remove("wrong");
 }
@@ -226,10 +228,10 @@ function guess(btn) {
     return;
   }
 
-  function wrongGuess() {
+  function wrongGuess(btn) {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
     document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
-
+    clearButton(btn);
     playClueSequence();
   }
 
@@ -257,6 +259,6 @@ function guess(btn) {
       return;
     }
     lives--;
-    wrongGuess();
+    wrongGuess(btn);
   }
 }
