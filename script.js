@@ -123,8 +123,8 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
-  if(gamePlaying && btn == pattern[btn]){
-    lightButton(btn,true);
+  if (gamePlaying && btn == pattern[btn]) {
+    lightButton(btn, true);
   }
   if (!tonePlaying) {
     context.resume();
@@ -151,18 +151,15 @@ o.connect(g);
 o.start(0);
 
 function lightButton(btn, wrong) {
-  if(wrong){
-      document.getElementById("button" + btn).classList.add("wrong");
-
-  }else{
-          document.getElementById("button" + btn).classList.add("lit");
-
+  if (wrong) {
+    document.getElementById("button" + btn).classList.add("wrong");
+  } else {
+    document.getElementById("button" + btn).classList.add("lit");
   }
 }
 function clearButton(btn) {
   document.getElementById("button" + btn).classList.remove("lit");
-    document.getElementById("button" + btn).classList.remove("wrong");
-
+  document.getElementById("button" + btn).classList.remove("wrong");
 }
 function playSingleClue(btn) {
   if (gamePlaying) {
@@ -199,7 +196,7 @@ function tik() {
     clearTimeout(clearTimeout);
     loseGame();
   }
-  
+
   document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
 }
 
