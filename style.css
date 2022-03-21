@@ -107,7 +107,7 @@ button {
 }
 
 #button2.wrong {
-  background: url();
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange-wrong.png?v=1647746527618);
   background-size: cover;
 }
 
@@ -139,7 +139,7 @@ button {
 }
 
 #button4.wrong {
-  background: url();
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green-wrong.png?v=1647746527680);
   background-size: cover;
 }
 
@@ -154,7 +154,7 @@ button {
   background-size: cover;
 }
 #button5.wrong {
-  background: url();
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue-wrong.png?v=1647746527504);
   background-size: cover;
 }
 
@@ -163,13 +163,12 @@ button {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-egg.png?v=1647746527293);
   background-size: cover;
 }
-#button6:active,
 #button6.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-open.png?v=1647746527341);
   background-size: cover;
 }
 #button6.wrong {
-  background: url();
+  background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-wrong.png?v=1647746528577);
   background-size: cover;
 }
 

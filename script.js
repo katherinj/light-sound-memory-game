@@ -13,6 +13,7 @@ var guessCounter = 0;
 var clueHoldTime = 1000;
 var lives = 3;
 var tok = 0;
+var playingClueSequence = false;
 
 var myInterval;
 var myTimeout;
@@ -85,6 +86,7 @@ function startGame() {
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
+  playingClueSequence = true;
   playClueSequence();
 }
 
@@ -124,6 +126,8 @@ function playTone(btn, len) {
 }
 function startTone(btn) {
   if (gamePlaying && btn == pattern[btn]) {
+    lightButton(btn, false);
+  }else{
     lightButton(btn, true);
   }
   if (!tonePlaying) {
@@ -134,9 +138,10 @@ function startTone(btn) {
     tonePlaying = true;
   }
 }
-function stopTone() {
+function stopTone(btn) {
   g.gain.setTargetAtTime(0, context.currentTime + 0.05, 0.025);
   tonePlaying = false;
+  clearButton(btn);
 }
 
 // Page Initialization
@@ -163,7 +168,7 @@ function clearButton(btn) {
 }
 function playSingleClue(btn) {
   if (gamePlaying) {
-    lightButton(btn);
+    lightButton(btn, false);
     playTone(btn, clueHoldTime);
     setTimeout(clearButton, clueHoldTime, btn);
   }
@@ -184,6 +189,7 @@ function playClueSequence() {
   }
   tok = 20;
   myTimeout = setTimeout("myTimer()", delay);
+  playingClueSequence = false;
 }
 
 function myTimer() {
