@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-/*   background-image: linear-gradient(
+  background-image: linear-gradient(
     to top left,
     #b2e4ed,
     #f4ecdb,
@@ -9,10 +9,10 @@ html {
     #ffe5f7,
     #eddefd,
     #e8f4e5
-  ); */
+  ); 
 
-    background: url("https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/farmbg.jpg?v=1647921669212");
-  background-size: cover;
+/*     background: url("https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/farm%20background.jpg?v=1647922005341");
+  background-size: cover; */
 /*   height: 100%; */
 }
 

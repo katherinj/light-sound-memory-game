@@ -126,6 +126,16 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
+  if (!gamePlaying) {
+    document.getElementById("button" + btn).classList.add("lit");
+  } else {
+    if (btn == pattern[guessCounter]) {
+      document.getElementById("button" + btn).classList.add("lit");
+    } else {
+      document.getElementById("button" + btn).classList.add("wrong");
+      wrongGuess = true;
+    }
+  }
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -155,17 +165,15 @@ function lightButton(btn, wrong) {
   // if (!wrong) {
   //   document.getElementById("button" + btn).classList.add("wrong");
   // } else {
-    document.getElementById("button" + btn).classList.add("lit");
+  document.getElementById("button" + btn).classList.add("lit");
   // }
 }
 function clearButton(btn) {
   //document.getElementById("button" + btn).classList.add("normal");
-  if(wrongGuess){
-      document.getElementById("button" + btn).classList.remove("wrong");
-
-  }else{
-      document.getElementById("button" + btn).classList.remove("lit");
-
+  if (wrongGuess) {
+    document.getElementById("button" + btn).classList.remove("wrong");
+  } else {
+    document.getElementById("button" + btn).classList.remove("lit");
   }
 }
 function playSingleClue(btn) {
@@ -178,7 +186,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
-  wrongGuess=false;
+  wrongGuess = false;
   guessCounter = 0;
   clearInterval(myInterval);
   let delay = nextClueWaitTime;
@@ -263,17 +271,6 @@ function guess(btn) {
   }
 }
 
-function buttonPressed(btn){
-  if(!gamePlaying){
-    document.getElementById("button" + btn).classList.add("lit");
-  }else{
-    if(btn == pattern[guessCounter]){
-      document.getElementById("button"+btn).classList.add("lit");
-    }else{
-      document.getElementById("button"+btn).classList.add("wrong");
-      wrongGuess = true;
-    }
-  }
-  
+function buttonPressed(btn) {
   guess(btn);
 }
