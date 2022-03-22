@@ -81,7 +81,8 @@ function startGame() {
   progress = 0;
   gamePlaying = true;
   intervalVar = true;
-
+  wrongGuess = false;
+  
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -94,6 +95,7 @@ function startGame() {
 function stopGame() {
   //update game variable
   gamePlaying = false;
+  // wrongGuess = false;
   clearInterval(myInterval);
   clearTimeout(myTimeout);
   console.log("ended game");
@@ -240,6 +242,7 @@ function guess(btn) {
   function wrongGuess(btn) {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
     document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+    wrongGuess = true;
     clearButton(btn);
     playClueSequence();
   }
