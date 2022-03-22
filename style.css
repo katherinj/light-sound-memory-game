@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  background-image: linear-gradient(
+/*   background-image: linear-gradient(
     to top left,
     #b2e4ed,
     #f4ecdb,
@@ -9,8 +9,11 @@ html {
     #ffe5f7,
     #eddefd,
     #e8f4e5
-  );
-  height: 100%;
+  ); */
+
+    background: url("https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/farmbg.jpg?v=1647921669212");
+  background-size: cover;
+/*   height: 100%; */
 }
 
 *,
@@ -55,21 +58,20 @@ button {
   display: none;
 }
 
-.gameInfo > button {
+#gameInfo > button {
   border: none;
   width: 300px;
   height: 150px;
   cursor: pointer;
+  background-size: cover;
+  background-position: center;
 }
 #startBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
-  background-size: cover;
-  background-position: center;
+
 }
 #stopBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
-  background-size: cover;
-  background-position: center;
 }
 
 #gameButtonArea > button {
@@ -77,28 +79,25 @@ button {
   width: 200px;
   height: 200px;
   border: none;
+  background-size: cover;
 }
 
 /*red button*/
-#button1{
+#button1 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red-egg.png?v=1647746527378);
-  background-size: cover;
 }
 
 #button1.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red-open.png?v=1647746528308);
-  background-size: cover;
 }
 
 #button1.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red-wrong.png?v=1647746528463);
-  background-size: cover;
 }
 
 /*orange button*/
 #button2 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange-egg.png?v=1647746527860);
-  background-size: cover;
 }
 
 #button2.lit {
@@ -108,69 +107,53 @@ button {
 
 #button2.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/orange-wrong.png?v=1647746527618);
-  background-size: cover;
 }
 
 /*yellow button*/
 #button3 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow-egg.png?v=1647746531888);
-  background-size: cover;
 }
 
 #button3.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow-open.png?v=1647746531467);
-  background-size: cover;
 }
 #button3.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/yellow-wrong.png?v=1647746531754);
-  background-size: cover;
 }
 
 /*green button*/
 #button4 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green-egg.png?v=1647746528520);
-  background-size: cover;
 }
 #button4.lit {
   /*background: rgb(95, 168, 50);*/
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green-open.png?v=1647746529601);
-  background-size: cover;
 }
-
 #button4.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/green-wrong.png?v=1647746527680);
-  background-size: cover;
 }
 
 /*blue button*/
 #button5 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue-egg.png?v=1647746529380);
-  background-size: cover;
 }
-
 #button5.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue-open.png?v=1647746528351);
-  background-size: cover;
 }
 #button5.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue-wrong.png?v=1647746527504);
-  background-size: cover;
 }
 
 /*purple button*/
 #button6 {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-egg.png?v=1647746527293);
-  background-size: cover;
 }
 #button6.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-open.png?v=1647746527341);
-  background-size: cover;
 }
 #button6.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-wrong.png?v=1647746528577);
-  background-size: cover;
 }
-
 
 /*difficulty buttons*/
 #difficultyBtnArea > button {
@@ -218,8 +201,8 @@ button {
 #timer {
   display: inline;
 }
-.disabled{
-  pointer-click: none;
+.disabled {
+  pointer-events: none;
 }
 /* images and videos max out at full width */
 img,
