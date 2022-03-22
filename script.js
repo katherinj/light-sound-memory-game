@@ -140,8 +140,8 @@ function stopTone(btn) {
   tonePlaying = false;
   clearButton(btn);
 }
-function setButtons(btn){
-    if (!gamePlaying) {
+function setButtons(btn) {
+  if (!gamePlaying) {
     document.getElementById("button" + btn).classList.add("lit");
   } else {
     if (btn == pattern[guessCounter]) {
@@ -276,13 +276,12 @@ function buttonPressed(btn) {
   guess(btn);
 }
 
-function lockButtons(lock){
-  for(let i = 1; i<=6; i++){
-    if(lock){
-          document.getElementById("button"+i).classList.add("locked");
-    }
-    else{
-          document.getElementById("button"+i).classList.remove("locked");
+function lockButtons(lock) {
+  for (let i = 1; i <= 6; i++) {
+    if (lock) {
+      document.getElementById("button" + i).classList.add("locked");
+    } else {
+      document.getElementById("button" + i).classList.remove("locked");
     }
   }
 }

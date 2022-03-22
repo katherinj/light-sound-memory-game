@@ -36,8 +36,7 @@ The following **additional** features are implemented:
 - [x] Player has 4 different difficulty levels to choose from on home screen
 - [x] Amount of lives vary depending on difficulty level
 - [x] Image that will appear when button is pressed differs when a wrong guess is made.
-- [x] Buttons are disabled while the sequence is being played
-- [] 
+- [x] Buttons are disabled while the sequence is being played 
 
 ## Video Walkthrough (GIF)
 
