@@ -4,14 +4,13 @@
 
 Submitted by: **Katherin Jimenez**
 
-Time spent: **#** hours spent in total
+Time spent: **25** hours spent in total
 
 Link to project: (insert your link here, should start with https://glitch.com...)
 
 ## Required Functionality
 
 The following **required** functionality is complete:
-
 * [X] Game interface has a heading (h1 tag), a line of body text (p tag), and four buttons that match the demo app
 * [X] "Start" button toggles between "Start" and "Stop" when clicked. 
 * [X] Game buttons each light up and play a sound when clicked. 
@@ -34,9 +33,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Player has 4 different modes to choose from on home screen
+- [x] Player has 4 different difficulty levels to choose from on home screen
 - [x] Amount of lives vary depending on difficulty level
-- [x] Wrong button click
+- [x] Image that will appear when button is pressed differs when a wrong guess is made.
+- [x] Buttons are disabled while the sequence is being played
+- [] 
 
 ## Video Walkthrough (GIF)
 
@@ -58,10 +59,7 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-A challenge that I faced at the beginning of the project was trying to figure out why the startGame() and stopGame() functions were not toggling the startBtn and stopBtn. I knew something must be misspelled but I could not pinpoint where in the code. After a frustrating 10-15 minutes of looking over the code and trying to find the error, I decided to try using the console screen. The console revealed a TypeError in the getElementById line of code, and quickly I was able to realize I had looked over a small spelling error where I had capitalized the “ID” part. This is the first time I am using Glitch as well as using HTML and JavaScript. Learning how to use the console was very valuable to helping solve problems in my code.
-When I finished the initial part of the project, I moved onto the optional features. I added 4 different difficulty levels a player could choose from. Having the knowledge of the console screen helped me a lot in creating these features. I also moved onto using images instead of colors. I was having issues with making the images show up on the buttons. However, after reading up on how to use images with buttons, I was able to solve this issue. 
-The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button selected was correct or wrong. 
-
+The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button pressed was correct or wrong. I think the reason I struggled a lot with this feature was because I was not sure how to go about implementing the logic in the JS file with the CSS file. At first, I focused on trying to somehow use the active class. However, I quickly realized that this would not work. Then, I tried to change the function that onMousClick called. I then realized that this would not work either because the image would not sync up with the sounds being played and would lag. After doing some reserach, I realized that onMouseClick is triggered only once the user has pressed and released the button. This is when I realized I needed to focus on the function that onMouseDown was calling.  
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 A question I have about web development would be how to implement containers in order to align elements. After implementing the feature where a player has a certain amount of lives, I wanted to be able to display the remaining lives right on the screen.  However, I found it difficult to align the life circles properly in relation to the buttons. I was reading up on it, and it seems like I would have to learn more about containers in order to implement this feature. Also, I would have liked to have more time to find out why I wasn’t able to disable the buttons when I wanted them to be disabled. 
