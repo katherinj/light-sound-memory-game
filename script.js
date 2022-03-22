@@ -18,6 +18,7 @@ var playingClueSequence = false;
 var myInterval;
 var myTimeout;
 var intervalVar;
+var wrongGuess = false;
 
 function setUpGame(mode) {
   //set difficulty level
@@ -125,13 +126,6 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
-  if (gamePlaying) {
-    console.log(btn==pattern[btn]);
-    lightButton(btn, btn == pattern[btn]);
-  } else {
-    lightButton(btn, false);
-  }
-
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -158,16 +152,21 @@ o.connect(g);
 o.start(0);
 
 function lightButton(btn, wrong) {
-  if (!wrong) {
-    document.getElementById("button" + btn).classList.add("wrong");
-  } else {
+  // if (!wrong) {
+  //   document.getElementById("button" + btn).classList.add("wrong");
+  // } else {
     document.getElementById("button" + btn).classList.add("lit");
-  }
+  // }
 }
 function clearButton(btn) {
   //document.getElementById("button" + btn).classList.add("normal");
-  document.getElementById("button" + btn).classList.remove("lit");
-  document.getElementById("button" + btn).classList.remove("wrong");
+  if(wrongGuess){
+      document.getElementById("button" + btn).classList.remove("wrong");
+
+  }else{
+      document.getElementById("button" + btn).classList.remove("lit");
+
+  }
 }
 function playSingleClue(btn) {
   if (gamePlaying) {
@@ -179,7 +178,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
-
+  wrongGuess=false;
   guessCounter = 0;
   clearInterval(myInterval);
   let delay = nextClueWaitTime;
@@ -252,9 +251,9 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
-    if (btn != pattern[guessCounter]) {
-      lightButton(btn, true);
-    }
+    // if (btn != pattern[guessCounter]) {
+    //   lightButton(btn, true);
+    // }
     if (lives == 1) {
       loseGame();
       return;
@@ -262,4 +261,19 @@ function guess(btn) {
     lives--;
     wrongGuess(btn);
   }
+}
+
+function buttonPressed(btn){
+  if(!gamePlaying){
+    document.getElementById("button" + btn).classList.add("lit");
+  }else{
+    if(btn == pattern[guessCounter]){
+      document.getElementById("button"+btn).classList.add("lit");
+    }else{
+      document.getElementById("button"+btn).classList.add("wrong");
+      wrongGuess = true;
+    }
+  }
+  
+  guess(btn);
 }
