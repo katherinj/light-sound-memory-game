@@ -126,6 +126,7 @@ function playTone(btn, len) {
 }
 function startTone(btn) {
   if (gamePlaying) {
+    console.log(btn==pattern[btn]);
     lightButton(btn, btn == pattern[btn]);
   } else {
     lightButton(btn, false);
@@ -157,14 +158,14 @@ o.connect(g);
 o.start(0);
 
 function lightButton(btn, wrong) {
-  if (wrong) {
+  if (!wrong) {
     document.getElementById("button" + btn).classList.add("wrong");
   } else {
     document.getElementById("button" + btn).classList.add("lit");
   }
 }
 function clearButton(btn) {
-  document.getElementById("button" + btn).classList.add("normal");
+  //document.getElementById("button" + btn).classList.add("normal");
   document.getElementById("button" + btn).classList.remove("lit");
   document.getElementById("button" + btn).classList.remove("wrong");
 }

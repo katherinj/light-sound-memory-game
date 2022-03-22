@@ -81,7 +81,7 @@ button {
 
 /*red button*/
 /* #button1,  */
-#button1 {
+#button1, #button1.normal {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/red-egg.png?v=1647746527378);
   background-size: cover;
 }
@@ -144,7 +144,7 @@ button {
 }
 
 /*blue button*/
-#button5,, #button5.normal {
+#button5, #button5.normal {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/blue-egg.png?v=1647746529380);
   background-size: cover;
 }
