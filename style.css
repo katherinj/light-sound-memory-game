@@ -150,6 +150,7 @@ button {
 }
 #button6.lit {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-open.png?v=1647746527341);
+  background: rgb(100,100,100);
 }
 #button6.wrong {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/purple-wrong.png?v=1647746528577);

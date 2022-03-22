@@ -126,16 +126,7 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
-  if (!gamePlaying) {
-    document.getElementById("button" + btn).classList.add("lit");
-  } else {
-    if (btn == pattern[guessCounter]) {
-      document.getElementById("button" + btn).classList.add("lit");
-    } else {
-      document.getElementById("button" + btn).classList.add("wrong");
-      wrongGuess = true;
-    }
-  }
+  setButtons(btn);
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -149,7 +140,18 @@ function stopTone(btn) {
   tonePlaying = false;
   clearButton(btn);
 }
-
+function setButtons(btn){
+    if (!gamePlaying) {
+    document.getElementById("button" + btn).classList.add("lit");
+  } else {
+    if (btn == pattern[guessCounter]) {
+      document.getElementById("button" + btn).classList.add("lit");
+    } else {
+      document.getElementById("button" + btn).classList.add("wrong");
+      wrongGuess = true;
+    }
+  }
+}
 // Page Initialization
 // Init Sound Synthesizer
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -161,24 +163,20 @@ g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
 
-function lightButton(btn, wrong) {
-  // if (!wrong) {
-  //   document.getElementById("button" + btn).classList.add("wrong");
-  // } else {
+function lightButton(btn) {
   document.getElementById("button" + btn).classList.add("lit");
-  // }
 }
 function clearButton(btn) {
-  //document.getElementById("button" + btn).classList.add("normal");
   if (wrongGuess) {
     document.getElementById("button" + btn).classList.remove("wrong");
   } else {
     document.getElementById("button" + btn).classList.remove("lit");
   }
 }
+
 function playSingleClue(btn) {
   if (gamePlaying) {
-    lightButton(btn, false);
+    lightButton(btn);
     playTone(btn, clueHoldTime);
     setTimeout(clearButton, clueHoldTime, btn);
   }
