@@ -148,6 +148,7 @@ function setButtons(btn){
       document.getElementById("button" + btn).classList.add("lit");
     } else {
       document.getElementById("button" + btn).classList.add("wrong");
+      console.log("wrong guess!!!");
       wrongGuess = true;
     }
   }
