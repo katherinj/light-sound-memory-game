@@ -184,6 +184,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
+  lockButtons(true);
   wrongGuess = false;
   guessCounter = 0;
   clearInterval(myInterval);
@@ -201,6 +202,7 @@ function playClueSequence() {
 }
 
 function myTimer() {
+  lockButtons(false);
   myInterval = setInterval("tik()", 1000);
 }
 
@@ -271,4 +273,15 @@ function guess(btn) {
 
 function buttonPressed(btn) {
   guess(btn);
+}
+
+function lockButtons(lock){
+  for(let i = 1; i<=6; i++){
+    if(lock){
+          document.getElementById("button"+i).classList.add("locked");
+    }
+    else{
+          document.getElementById("button"+i).classList.remove("locked");
+    }
+  }
 }
