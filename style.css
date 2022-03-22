@@ -218,7 +218,9 @@ button {
 #timer {
   display: inline;
 }
-
+.disabled{
+  pointer-click: none;
+}
 /* images and videos max out at full width */
 img,
 video {
