@@ -202,7 +202,7 @@ button {
 #timer {
   display: inline;
 }
-.disabled {
+.locked {
   pointer-events: none;
 }
 /* images and videos max out at full width */
