@@ -23,7 +23,7 @@ The following **required** functionality is complete:
 The following **optional** features are implemented:
 
 * [X] Any HTML page elements (including game buttons) has been styled differently than in the tutorial
-* [ ] Buttons use a pitch (frequency) other than the ones in the tutorial
+* [x] Buttons use a pitch (frequency) other than the ones in the tutorial
 * [X] More than 4 functional game buttons
 * [X] Playback speeds up on each turn
 * [X] Computer picks a different pattern each time the game is played
@@ -34,9 +34,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] Player has 4 different modes to choose from on home screen
-- [ ] Amount of lives vary depending on difficulty level
-
+- [x] Player has 4 different modes to choose from on home screen
+- [x] Amount of lives vary depending on difficulty level
+- [x] Wrong button click
 
 ## Video Walkthrough (GIF)
 
@@ -59,7 +59,8 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 A challenge that I faced at the beginning of the project was trying to figure out why the startGame() and stopGame() functions were not toggling the startBtn and stopBtn. I knew something must be misspelled but I could not pinpoint where in the code. After a frustrating 10-15 minutes of looking over the code and trying to find the error, I decided to try using the console screen. The console revealed a TypeError in the getElementById line of code, and quickly I was able to realize I had looked over a small spelling error where I had capitalized the “ID” part. This is the first time I am using Glitch as well as using HTML and JavaScript. Learning how to use the console was very valuable to helping solve problems in my code.
-When I finished the initial part of the project, I moved onto the optional features. I added 4 different difficulty levels a player could choose from. Having the knowledge of the console screen helped me a lot in creating these features. I also moved onto using images instead of colors. I was having issues with making the images show up on the buttons. However, after reading up on how to use images with buttons, I was able to solve this issue.   
+When I finished the initial part of the project, I moved onto the optional features. I added 4 different difficulty levels a player could choose from. Having the knowledge of the console screen helped me a lot in creating these features. I also moved onto using images instead of colors. I was having issues with making the images show up on the buttons. However, after reading up on how to use images with buttons, I was able to solve this issue. 
+The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button selected was correct or wrong. 
 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
