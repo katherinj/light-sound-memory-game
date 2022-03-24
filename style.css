@@ -29,6 +29,7 @@ body {
   text-align: center;
   font-family: "Quicksand", verdana, sans-serif;
   font-weight: 600;
+  text-align: center;
 }
 
 h1 {
@@ -58,14 +59,16 @@ button {
   display: none;
 }
 
-#gameInfo > button {
+#startStop > button {
   border: none;
   width: 300px;
   height: 150px;
   cursor: pointer;
   background-size: cover;
   background-position: center;
+  position: center;
 }
+
 #startBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
 }
@@ -203,12 +206,9 @@ button {
   background: rgb(255, 185, 200);
 }
 
-#lives {
+/* #timer {
   display: inline;
-}
-#timer {
-  display: inline;
-}
+} */
 .locked {
   pointer-events: none;
 }
@@ -239,6 +239,11 @@ button {
   float: right;
   margin-bottom: 50px;
 }
+.timer .img {
+  width: 100%;
+  height: 100%;
+}
+
 .timerTxt {
   position: absolute;
   top: 50%;
@@ -247,13 +252,13 @@ button {
   text-align: center;
   border: 1px solid black;
 }
-.wrapper {
+.gameInfo {
   border: 1px solid black;
-    margin-left:auto;
-     max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden; 
-    margin-right:auto;
+  margin-left: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: auto;
 }
 
 /* images and videos max out at full width */
