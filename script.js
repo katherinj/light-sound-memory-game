@@ -95,7 +95,7 @@ function startGame() {
 function stopGame() {
   //update game variable
   gamePlaying = false;
-  // wrongGuess = false;
+  wrongGuess = false;
   clearInterval(myInterval);
   clearTimeout(myTimeout);
   console.log("ended game");
@@ -150,7 +150,6 @@ function setButtons(btn) {
       document.getElementById("button" + btn).classList.add("lit");
     } else {
       document.getElementById("button" + btn).classList.add("wrong");
-      console.log("wrong guess!!!");
       wrongGuess = true;
     }
   }
@@ -188,6 +187,7 @@ function playSingleClue(btn) {
 function playClueSequence() {
   context.resume();
   lockButtons(true);
+  console.log("Locking buttons");
   wrongGuess = false;
   guessCounter = 0;
   clearInterval(myInterval);
@@ -206,6 +206,7 @@ function playClueSequence() {
 
 function myTimer() {
   lockButtons(false);
+  console.log("unlocking buttons");
   myInterval = setInterval("tik()", 1000);
 }
 
