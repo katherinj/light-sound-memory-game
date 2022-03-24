@@ -82,7 +82,7 @@ function startGame() {
   gamePlaying = true;
   intervalVar = true;
   wrongGuess = false;
-  
+
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
