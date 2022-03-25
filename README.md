@@ -59,10 +59,10 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button pressed was correct or wrong. I think the reason I struggled a lot with this feature was because I was not sure how to go about implementing the logic in the JS file with the CSS file. At first, I focused on trying to somehow use the active class. However, I quickly realized that this would not work. Then, I tried to change the function that onClick called. I then realized that this would not work either because the image would not sync up with the sounds being played and would lag. After doing some reserach, I realized that onClick is triggered only once the user has both pressed and released the button, and this was the reason for the image not showing up when I expected it to. This is when I realized I needed to focus on the function that onMouseDown was calling to display the proper image.   
+The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button pressed was correct or wrong. I think the reason I struggled a lot with this feature was because I was not sure how to go about implementing the logic in the JS file with the CSS file. At first, I focused on trying to somehow use the active class. However, I quickly realized that this would not work. Then, I tried to change the function that onClick() called. I then realized that this would not work either because the image would not sync up with the sounds being played and would lag. After doing some reserach, I realized that onClick() is triggered only once the user has both pressed and released the button, and this was the reason for the image not showing up when I expected it to. This is when I realized I needed to focus on the function that onMouseDown() was calling to display the proper image.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-A question I have about web development would be what is the best practice for creating a website that will look good and propery resize on different screen sizes? I als
+A question I have about web development would be what is the best practice for creating a website that will look good and propery resize on different screen sizes? 
 
 
 
@@ -75,7 +75,8 @@ Also, I would have liked to add an option to continue onto the next level when y
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording] (https://www.loom.com/share/02e0008dc3f045d293565114dbc48fdd)
+
 
 
 ## License
