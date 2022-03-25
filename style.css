@@ -59,21 +59,22 @@ button {
   display: none;
 }
 
-#startStop > button {
-  border: none;
-  width: 300px;
-  height: 150px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  position: center;
-}
-
 #startBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Stop.png?v=1647479072035);
+  background-size: cover;
+  width: 400px;
+  height: 200px;
+  background-position: center;
+  position: center;
+  margin-bottom: 50px;
 }
 #stopBtn {
   background: url(https://cdn.glitch.global/06a52898-4726-46eb-b2e1-bc3f3620a583/Start.png?v=1647479067216);
+  background-size: cover;
+  width: 400px;
+  height: 200px;
+  background-position: center;
+  margin-bottom: 50px;
 }
 
 #gameButtonArea > button {
