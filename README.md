@@ -43,9 +43,9 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 https://imgur.com/gallery/uRMrCgo
-![](gif2-link-here)
-![](gif3-link-here)
-![](gif4-link-here)
+![](https://cdn.glitch.global/4d4a5310-0ac2-43a8-ab8f-64871a35656e/2-TLuzoYz.gif?v=1648216881469)
+![](https://cdn.glitch.global/4d4a5310-0ac2-43a8-ab8f-64871a35656e/3-bv1DbWi.gif?v=1648216880384)
+![](https://cdn.glitch.global/4d4a5310-0ac2-43a8-ab8f-64871a35656e/1-pb7k8by.gif?v=1648216956228)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
