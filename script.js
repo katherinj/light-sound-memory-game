@@ -188,6 +188,7 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
+  document.getElementById("timerTxt").innerHTML = "Time left: ";
   
   //lock buttons
   lockButtons(true);
@@ -196,7 +197,11 @@ function playClueSequence() {
   guessCounter = 0;
   clearInterval(myInterval);
   let delay = nextClueWaitTime;
-  tok = progress + 2 + clueHoldTime;
+  if(difficulty == "imp"){
+    tok = progress + 2;
+  }else{
+    tok = 15;
+  }
   for (let i = 0; i <= progress; i++) {
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
@@ -246,7 +251,7 @@ function guess(btn) {
   function wrongGuess(btn) {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
     document.getElementById("livesTxt").innerHTML = "Lives left: " + lives;
-    document.getElementById("timerTxt").innerHTML = "Time left:";
+    document.getElementById("timerTxt").innerHTML = "Time left: ";
 
     wrongGuess = true;
     clearButton(btn);
@@ -276,10 +281,6 @@ function guess(btn) {
     lives--;
     wrongGuess(btn);
   }
-}
-
-function buttonPressed(btn) {
-  guess(btn);
 }
 
 function lockButtons(lock) {
