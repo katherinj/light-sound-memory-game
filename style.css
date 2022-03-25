@@ -210,6 +210,10 @@ button {
 /*   margin-left: 20px;
   margin-right: 20px; */
 }
+#livesDisplay{
+  width: 33%;
+  height: 30%
+}
 
 .lives {
   width: 200px;
