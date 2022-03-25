@@ -33,6 +33,7 @@ body {
 }
 
 h1 {
+  margin: 20px;
   font-size: 60px;
   text-align: center;
   letter-spacing: 5px;
@@ -77,11 +78,15 @@ button {
   margin-bottom: 50px;
 }
 
+#gameButtonArea{
+    border: 2px solid black;
+
+}
+
 #gameButtonArea > button {
   margin-bottom: 30px;
   width: 200px;
   height: 200px;
-  border: none;
   background-size: cover;
 }
 
