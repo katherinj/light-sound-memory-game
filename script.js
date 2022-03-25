@@ -50,6 +50,8 @@ function setUpGame(mode) {
 
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
+  document.getElementById("livesTxt").innerHTML = "";
+  document.getElementById("timerTxt").innerHTML = "";
 }
 
 function setPattern(numBtns) {
@@ -82,15 +84,20 @@ function startGame() {
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
 
+  //start clue sequence
   playClueSequence();
 }
 
 function stopGame() {
-  //update game variable
+  //update game variables
   gamePlaying = false;
   wrongGuess = false;
+
+  //clear intervals
   clearInterval(myInterval);
   clearTimeout(myTimeout);
+
+  //unlock game buttons
   lockButtons(false);
   console.log("ended game");
 
@@ -101,8 +108,6 @@ function stopGame() {
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
-
-  document.getElementById("timerTxt").innerHTML = "Time left: ";
 }
 
 // Sound Synthesis Functions
@@ -140,16 +145,17 @@ function stopTone(btn) {
 }
 function setButtons(btn) {
   if (!gamePlaying) {
-    document.getElementById("button" + btn).classList.add("lit");
+    lightButton(btn);
   } else {
     if (btn == pattern[guessCounter]) {
-      document.getElementById("button" + btn).classList.add("lit");
+      lightButton(btn);
     } else {
       document.getElementById("button" + btn).classList.add("wrong");
       wrongGuess = true;
     }
   }
 }
+
 // Page Initialization
 // Init Sound Synthesizer
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -182,20 +188,21 @@ function playSingleClue(btn) {
 
 function playClueSequence() {
   context.resume();
+  
+  //lock buttons
   lockButtons(true);
-  console.log("Locking buttons");
+
   wrongGuess = false;
   guessCounter = 0;
   clearInterval(myInterval);
   let delay = nextClueWaitTime;
-  tok = progress + 2;
+  tok = progress + 2 + clueHoldTime;
   for (let i = 0; i <= progress; i++) {
     console.log("play single clue: " + pattern[i] + " in " + delay + "ms");
     setTimeout(playSingleClue, delay, pattern[i]);
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  tok = 20;
   myTimeout = setTimeout("myTimer()", delay);
 }
 
