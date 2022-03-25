@@ -42,7 +42,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
+https://imgur.com/gallery/uRMrCgo
 ![](gif2-link-here)
 ![](gif3-link-here)
 ![](gif4-link-here)
@@ -50,11 +50,11 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
-https://support.glitch.com/t/how-do-i-make-it-so-that-something-i-put-in-is-centered-on-a-glitch-website/16530
-https://www.teachucomp.com/add-a-line-break-in-html-tutorial/#:~:text=To%20add%20a%20line%20break%20to%20your%20HTML%20code%2C%20you,enter%20creates%20another%20blank%20line.
+https://support.glitch.com/
 https://imagecolorpicker.com/color-code/2596be
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+https://developer.mozilla.org/en-US/
+https://www.w3schools.com/w3css/defaulT.asp
+https://stackoverflow.com/
 https://www.youtube.com/watch?v=-9MSxO0uSec
 
 
