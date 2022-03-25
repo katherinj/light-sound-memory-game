@@ -6,7 +6,8 @@ Submitted by: **Katherin Jimenez**
 
 Time spent: **25** hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: https://vigorous-thunder-wash.glitch.me/
+Link to code: https://glitch.com/edit/#!/vigorous-thunder-wash
 
 ## Required Functionality
 
@@ -33,10 +34,10 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Buttons are disabled while the sequence is being played 
 - [x] Player has 4 different difficulty levels to choose from on home screen
 - [x] Amount of lives vary depending on difficulty level
-- [x] Image that will appear when button is pressed differs when a wrong guess is made.
-- [x] Buttons are disabled while the sequence is being played 
+- [x] A wrong guess will show a different image 
 
 ## Video Walkthrough (GIF)
 
@@ -58,7 +59,7 @@ https://www.youtube.com/watch?v=-9MSxO0uSec
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button pressed was correct or wrong. I think the reason I struggled a lot with this feature was because I was not sure how to go about implementing the logic in the JS file with the CSS file. At first, I focused on trying to somehow use the active class. However, I quickly realized that this would not work. Then, I tried to change the function that onMousClick called. I then realized that this would not work either because the image would not sync up with the sounds being played and would lag. After doing some reserach, I realized that onMouseClick is triggered only once the user has pressed and released the button. This is when I realized I needed to focus on the function that onMouseDown was calling.  
+The biggest challange I faced while working on this project would have to be making the correct image appear on the button depending if the button pressed was correct or wrong. I think the reason I struggled a lot with this feature was because I was not sure how to go about implementing the logic in the JS file with the CSS file. At first, I focused on trying to somehow use the active class. However, I quickly realized that this would not work. Then, I tried to change the function that onClick called. I then realized that this would not work either because the image would not sync up with the sounds being played and would lag. After doing some reserach, I realized that onMousClick is triggered only once the user has pressed and released the button. This is when I realized I needed to focus on the function that onMouseDown was calling.  
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 A question I have about web development would be how to implement containers in order to align elements. After implementing the feature where a player has a certain amount of lives, I wanted to be able to display the remaining lives right on the screen.  However, I found it difficult to align the life circles properly in relation to the buttons. I was reading up on it, and it seems like I would have to learn more about containers in order to implement this feature. Also, I would have liked to have more time to find out why I wasn’t able to disable the buttons when I wanted them to be disabled. 

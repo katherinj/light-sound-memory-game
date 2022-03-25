@@ -6,19 +6,16 @@ const nextClueWaitTime = 1000;
 var pattern = [];
 var difficulty = "";
 var progress = 0;
+var lives = 3;
 var gamePlaying = false;
 var tonePlaying = false;
+var wrongGuess = false;
 var volume = 0.5; //can only be between 0.0 and 1.0
 var guessCounter = 0;
 var clueHoldTime = 1000;
-var lives = 3;
 var tok = 0;
-var playingClueSequence = false;
-
 var myInterval;
 var myTimeout;
-var intervalVar;
-var wrongGuess = false;
 
 function setUpGame(mode) {
   //set difficulty level
@@ -79,14 +76,12 @@ function startGame() {
   //initialize game variables
   progress = 0;
   gamePlaying = true;
-  intervalVar = true;
   wrongGuess = false;
 
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
 
-  playingClueSequence = true;
   playClueSequence();
 }
 
@@ -202,7 +197,6 @@ function playClueSequence() {
   }
   tok = 20;
   myTimeout = setTimeout("myTimer()", delay);
-  playingClueSequence = false;
 }
 
 function myTimer() {
