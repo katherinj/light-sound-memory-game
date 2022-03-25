@@ -53,7 +53,6 @@ function setUpGame(mode) {
 
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 }
 
 function setPattern(numBtns) {
@@ -86,7 +85,6 @@ function startGame() {
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
 
   playingClueSequence = true;
   playClueSequence();
@@ -100,6 +98,7 @@ function stopGame() {
   clearTimeout(myTimeout);
   lockButtons(false);
   console.log("ended game");
+
   //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
   document.getElementById("gameScreen").classList.add("hidden");
@@ -107,7 +106,8 @@ function stopGame() {
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("button5").classList.add("hidden");
   document.getElementById("button6").classList.add("hidden");
-  document.getElementById("timerTxt").innerHTML = "";
+
+  document.getElementById("timerTxt").innerHTML = "Time left: ";
 }
 
 // Sound Synthesis Functions
@@ -207,17 +207,18 @@ function playClueSequence() {
 
 function myTimer() {
   lockButtons(false);
+  document.getElementById("livesTxt").innerHTML = "Lives left: " + lives;
+  document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
   console.log("unlocking buttons");
   myInterval = setInterval("tik()", 1000);
 }
 
 function tik() {
   tok--;
-  if (tok <= 0) {
+  if (tok < 0) {
     clearTimeout(clearTimeout);
     loseGame();
   }
-
   document.getElementById("timerTxt").innerHTML = "Time left: " + tok;
 }
 
@@ -243,7 +244,9 @@ function guess(btn) {
 
   function wrongGuess(btn) {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
-    document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+    document.getElementById("livesTxt").innerHTML = "Lives left: " + lives;
+    document.getElementById("timerTxt").innerHTML = "Time left:";
+
     wrongGuess = true;
     clearButton(btn);
     playClueSequence();
@@ -265,9 +268,6 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
-    // if (btn != pattern[guessCounter]) {
-    //   lightButton(btn, true);
-    // }
     if (lives == 1) {
       loseGame();
       return;
