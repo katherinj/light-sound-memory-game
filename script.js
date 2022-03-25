@@ -50,8 +50,8 @@ function setUpGame(mode) {
 
   document.getElementById("welcomeScreen").classList.add("hidden");
   document.getElementById("gameScreen").classList.remove("hidden");
-  document.getElementById("livesTxt").innerHTML = "";
-  document.getElementById("timerTxt").innerHTML = "";
+  document.getElementById("livesTxt").innerHTML = "Lives left: " + lives;
+  document.getElementById("timerTxt").innerHTML = "Time left: ";
 }
 
 function setPattern(numBtns) {
@@ -251,7 +251,7 @@ function guess(btn) {
   function wrongGuess(btn) {
     alert("Wrong guess. You have " + lives + " lives left. Try again!");
     document.getElementById("livesTxt").innerHTML = "Lives left: " + lives;
-    document.getElementById("timerTxt").innerHTML = "Time left: ";
+    document.getElementById("timerTxt").innerHTML = "Time left:   ";
 
     wrongGuess = true;
     clearButton(btn);
