@@ -249,14 +249,6 @@ button {
   text-align: center;
 }
 
-#wrapper {
-  margin-left: auto;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: auto;
-}
-
 /* images and videos max out at full width */
 img,
 video {
