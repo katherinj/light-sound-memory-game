@@ -21,7 +21,7 @@ html {
 
 /* adjust typography defaults */
 body {
-  margin: 2em;
+  margin: 0;
   line-height: 1.5;
   font-family: "Quicksand", verdana, sans-serif;
   font-weight: 600;
@@ -207,9 +207,8 @@ button {
 
 .gameInfo {
   border: none;
-  margin-left: 20px;
-  margin-right: 20px;
-  white-space: nowrap;
+/*   margin-left: 20px;
+  margin-right: 20px; */
 }
 
 .lives {
@@ -220,7 +219,6 @@ button {
   text-align: center;
   float: left;
   margin-left: 300px;
-  display: inline-block
 }
 #livesTxt {
   position: absolute;
@@ -238,7 +236,6 @@ button {
   text-align: center;
   float: right;
   margin-right: 300px;
-  display: inline-block;
 }
 
 #timerTxt {
@@ -247,6 +244,14 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+#wrapper {
+  margin-left: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: auto;
 }
 
 /* images and videos max out at full width */
