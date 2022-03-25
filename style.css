@@ -38,6 +38,7 @@ h1 {
 
 p {
   font-size: 20px;
+  margin: 10px;
 }
 p1 {
   font-size: 15px;
@@ -222,14 +223,12 @@ button {
 }
 
 .lives {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border: 1px solid black;
   position: relative;
   text-align: center;
   float: left;
-    margin-bottom: 50px;
-
 }
 .livesTxt {
   position: absolute;
@@ -241,13 +240,12 @@ button {
 }
 
 .timer {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   position: relative;
   text-align: center;
   border: 1px solid black;
   float: right;
-  margin-bottom: 50px;
 }
 .timer .img {
   width: 100%;

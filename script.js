@@ -86,7 +86,7 @@ function startGame() {
   //swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
-  document.getElementById("livesTxt").innerHTML = "Lives: " + lives;
+  document.getElementById("livesTxt").innerHTML = "Lives: ";
 
   playingClueSequence = true;
   playClueSequence();
