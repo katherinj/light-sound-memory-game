@@ -209,6 +209,7 @@ button {
   border: none;
   margin-left: 20px;
   margin-right: 20px;
+  white-space: nowrap;
 }
 
 .lives {
@@ -219,6 +220,7 @@ button {
   text-align: center;
   float: left;
   margin-left: 300px;
+  display: inline-block
 }
 #livesTxt {
   position: absolute;
@@ -236,6 +238,7 @@ button {
   text-align: center;
   float: right;
   margin-right: 300px;
+  display: inline-block;
 }
 
 #timerTxt {
