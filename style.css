@@ -58,7 +58,6 @@ button {
   height: 150px;
   background-position: center;
   position: center;
-  margin-bottom: 50px;
   border: none;
 }
 #stopBtn {
@@ -67,7 +66,6 @@ button {
   width: 300px;
   height: 150px;
   background-position: center;
-  margin-bottom: 50px;
   border: none;
 }
 
@@ -210,10 +208,6 @@ button {
 /*   margin-left: 20px;
   margin-right: 20px; */
 }
-#livesDisplay{
-  width: 33%;
-  height: 30%
-}
 
 .lives {
   width: 200px;
@@ -225,37 +219,11 @@ button {
   margin-left: 300px;
 }
 #livesTxt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  border: none;
-}
-
-.timer {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  text-align: center;
-  float: right;
-  margin-right: 300px;
 }
 
 #timerTxt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-}
-
-#wrapper {
-  margin-left: auto;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: auto;
 }
 
 /* images and videos max out at full width */

@@ -98,6 +98,7 @@ function stopGame() {
   wrongGuess = false;
   clearInterval(myInterval);
   clearTimeout(myTimeout);
+  lockButtons(false);
   console.log("ended game");
   //return to original screen
   document.getElementById("welcomeScreen").classList.remove("hidden");
